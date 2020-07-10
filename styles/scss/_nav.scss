@@ -1,0 +1,19 @@
+nav {
+   display: flex;
+   justify-content: flex-end;
+   height: 10vh;
+}
+
+nav ul {
+   display: flex;
+   flex-basis: 50%;
+   justify-content: space-between;
+}
+
+nav li {
+   @include headerText(20px, 29px);
+}
+
+nav li a {
+   padding: 10px 15px;
+}

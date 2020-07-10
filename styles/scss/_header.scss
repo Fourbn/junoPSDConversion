@@ -1,0 +1,29 @@
+header {
+   height: 100vh;
+}
+
+.index header {
+   height: 100vh;
+   background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../assets/header-image.jpg);
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   
+   .headerImage {
+      position: absolute;
+      top: 153px;
+      right: 0;
+
+      img {
+         width: 55vw;
+      }
+   }
+
+   h1 {
+      @include headerText(138px, 126px, auto);
+      max-width: 450px;
+      margin-top: 73px;
+      margin-left: 50px;
+   }
+}
+
