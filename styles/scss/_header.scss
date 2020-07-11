@@ -1,11 +1,38 @@
 header {
    height: 100vh;
-}
-
-.index header {
-   background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../assets/header-image.jpg);
    background-position: center;
    background-size: cover;
+   
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      height: 100vh;
+   }
+   
+   nav {
+      align-self: flex-start;
+   }
+   
+   h1 {
+      @include headerText(80px, 92px);
+      // height: 90vh;
+      margin: 0 auto;
+      padding-right: 100px;
+   }
+}
+
+.blog header {
+   background-image: url(../assets/blog-header.jpg);
+}
+
+.contact header {
+   background-image: url(../assets/contact-header.jpg);
+}
+
+
+.index header {
+   background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../assets/header-image.jpg);
    position: relative;
    
    .headerImage {
@@ -25,14 +52,3 @@ header {
       margin-left: 50px;
    }
 }
-
-.blog header {
-   background: url(../assets/blog-header.jpg);
-   background-position: center;
-   background-size: cover;
-
-   h1 {
-      @include headerText(80px, 92px);
-   }
-}
-

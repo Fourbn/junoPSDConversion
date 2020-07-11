@@ -259,6 +259,7 @@ nav {
       -ms-flex-pack: end;
           justify-content: flex-end;
   height: 10vh;
+  width: 100%;
 }
 
 nav ul {
@@ -298,15 +299,56 @@ nav ul li a:hover {
   color: #86e0f9;
 }
 
+.contact nav li:last-child {
+  color: #86e0f9;
+}
+
 header {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 100vh;
 }
 
+header nav {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+header h1 {
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 92px;
+  letter-spacing: 1;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding-right: 100px;
+}
+
+.blog header {
+  background-image: url(../assets/blog-header.jpg);
+}
+
+.contact header {
+  background-image: url(../assets/contact-header.jpg);
+}
+
 .index header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../assets/header-image.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/header-image.jpg);
-  background-position: center;
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../assets/header-image.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/header-image.jpg);
   position: relative;
 }
 
@@ -331,20 +373,4 @@ header {
   max-width: 450px;
   margin-top: 73px;
   margin-left: 50px;
-}
-
-.blog header {
-  background: url(../assets/blog-header.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.blog header h1 {
-  color: #fff;
-  font-family: 'Barlow', sans-serif;
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 92px;
-  letter-spacing: 1;
-  text-transform: uppercase;
 }
