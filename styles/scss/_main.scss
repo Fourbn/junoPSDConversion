@@ -104,3 +104,113 @@ aside {
    }
 }
 
+.siteMap {
+   height: 90vh;
+   // display: flex;
+   // flex-direction: column;
+   // justify-content: center;
+   
+   .wrapper {
+      height: 100%;
+   }
+
+   ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+
+      li {
+         margin: 0 10px;
+         min-height: calc(32px + 96px);
+         flex: 1 0 443px;
+         max-width: 500px;
+         padding-left: 5px;
+
+         .fa-li {
+            left: -2.4em;
+         }
+
+         .fa-location-arrow,
+         .fa-users,
+         .fa-file,
+         .fa-phone {
+            color: $mainBackground;
+            font-size: 1.533em;
+            left: -5px;
+         }
+
+         .fa-circle {
+            color: $accentColor;
+            font-size: 2.8em;
+            position: relative;
+            left: -10px;
+            top: -5px;
+         }
+      }
+
+      li:nth-child(-n+2) {
+         align-self: flex-end;
+      }
+   }
+}
+
+.aquariumView {
+   min-height: 75vh;
+   width: 100%;
+   background: url(../assets/banner.jpg);
+   // background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.monthProfile {
+   padding: 110px 0;
+
+   .wrapper {
+      display: flex;
+      justify-content: space-around;
+
+      .monthProfileText {
+         // align-self: center;
+         flex: 0 1 750px;
+
+         p {
+            margin: 27px 0;
+         }
+      }
+
+      .monthProfileImage {
+         order: -1;
+         flex: 0 0 275px;
+         box-shadow: 30px 30px $accentColor;
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+
+.gallery {
+   background: $secondaryBackground;
+   padding: 50px 0;
+
+   ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 0 50px;
+
+      li {
+         margin: 20px;
+         flex: 1 0 200px;
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}

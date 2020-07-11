@@ -1,0 +1,13 @@
+footer {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   background: $accentColor;
+
+   p {
+      @include bodyText();
+      color: $mainBackground;
+      text-align: center;
+      margin: 1px 0;
+   }
+}

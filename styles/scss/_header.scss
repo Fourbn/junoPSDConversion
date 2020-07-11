@@ -15,7 +15,7 @@ header {
    }
    
    h1 {
-      @include headerText(80px, 92px);
+      @include headerText(8rem, 92px);
       // height: 90vh;
       margin: 0 auto;
       padding-right: 100px;
@@ -46,7 +46,7 @@ header {
    }
 
    h1 {
-      @include headerText(138px, 126px, auto);
+      @include headerText(13.8rem, 126px, auto);
       max-width: 450px;
       margin-top: 73px;
       margin-left: 50px;

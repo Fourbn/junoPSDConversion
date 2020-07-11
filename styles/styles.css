@@ -333,7 +333,7 @@ header nav {
 header h1 {
   color: #fff;
   font-family: 'Barlow', sans-serif;
-  font-size: 80px;
+  font-size: 8rem;
   font-weight: 700;
   line-height: 92px;
   letter-spacing: 1;
@@ -369,7 +369,7 @@ header h1 {
 .index header h1 {
   color: #fff;
   font-family: 'Barlow', sans-serif;
-  font-size: 138px;
+  font-size: 13.8rem;
   font-weight: 700;
   line-height: 126px;
   letter-spacing: auto;
@@ -543,4 +543,157 @@ aside {
 .mainArticles .meetNemo {
   margin-top: 30px;
   text-align: right;
+}
+
+.siteMap {
+  height: 90vh;
+}
+
+.siteMap .wrapper {
+  height: 100%;
+}
+
+.siteMap ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.siteMap ul li {
+  margin: 0 10px;
+  min-height: calc(32px + 96px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 443px;
+          flex: 1 0 443px;
+  max-width: 500px;
+  padding-left: 5px;
+}
+
+.siteMap ul li .fa-li {
+  left: -2.4em;
+}
+
+.siteMap ul li .fa-location-arrow,
+.siteMap ul li .fa-users,
+.siteMap ul li .fa-file,
+.siteMap ul li .fa-phone {
+  color: #0c1423;
+  font-size: 1.533em;
+  left: -5px;
+}
+
+.siteMap ul li .fa-circle {
+  color: #86e0f9;
+  font-size: 2.8em;
+  position: relative;
+  left: -10px;
+  top: -5px;
+}
+
+.siteMap ul li:nth-child(-n+2) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.aquariumView {
+  min-height: 75vh;
+  width: 100%;
+  background: url(../assets/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.monthProfile {
+  padding: 110px 0;
+}
+
+.monthProfile .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.monthProfile .wrapper .monthProfileText {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 750px;
+          flex: 0 1 750px;
+}
+
+.monthProfile .wrapper .monthProfileText p {
+  margin: 27px 0;
+}
+
+.monthProfile .wrapper .monthProfileImage {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 275px;
+          flex: 0 0 275px;
+  -webkit-box-shadow: 30px 30px #86e0f9;
+          box-shadow: 30px 30px #86e0f9;
+}
+
+.monthProfile .wrapper .monthProfileImage img {
+  width: 100%;
+}
+
+.gallery {
+  background: #0f614e;
+  padding: 50px 0;
+}
+
+.gallery ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 50px;
+}
+
+.gallery ul li {
+  margin: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+}
+
+.gallery ul li img {
+  width: 100%;
+}
+
+footer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #86e0f9;
+}
+
+footer p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: #fff;
+  color: #0c1423;
+  text-align: center;
+  margin: 1px 0;
 }
