@@ -3,7 +3,6 @@ header {
 }
 
 .index header {
-   height: 100vh;
    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../assets/header-image.jpg);
    background-position: center;
    background-size: cover;
@@ -24,6 +23,16 @@ header {
       max-width: 450px;
       margin-top: 73px;
       margin-left: 50px;
+   }
+}
+
+.blog header {
+   background: url(../assets/blog-header.jpg);
+   background-position: center;
+   background-size: cover;
+
+   h1 {
+      @include headerText(80px, 92px);
    }
 }
 

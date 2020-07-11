@@ -272,7 +272,7 @@ nav ul {
           justify-content: space-between;
 }
 
-nav li {
+nav ul li {
   color: #fff;
   font-family: 'Barlow', sans-serif;
   font-size: 20px;
@@ -282,8 +282,20 @@ nav li {
   text-transform: uppercase;
 }
 
-nav li a {
+nav ul li a {
   padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  color: #86e0f9;
+}
+
+.index nav li:first-child {
+  color: #86e0f9;
+}
+
+.blog nav li:nth-child(3) {
+  color: #86e0f9;
 }
 
 header {
@@ -291,7 +303,6 @@ header {
 }
 
 .index header {
-  height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../assets/header-image.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/header-image.jpg);
   background-position: center;
@@ -320,4 +331,20 @@ header {
   max-width: 450px;
   margin-top: 73px;
   margin-left: 50px;
+}
+
+.blog header {
+  background: url(../assets/blog-header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.blog header h1 {
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 92px;
+  letter-spacing: 1;
+  text-transform: uppercase;
 }

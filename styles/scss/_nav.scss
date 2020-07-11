@@ -2,18 +2,35 @@ nav {
    display: flex;
    justify-content: flex-end;
    height: 10vh;
+
+   ul {
+      display: flex;
+      flex-basis: 50%;
+      justify-content: space-between;
+
+      
+      li {
+         @include headerText(20px, 29px);
+
+         a {
+            padding: 10px 15px;
+
+            &:hover {
+               color: $accentColor;
+            }
+         }
+      }
+   }
 }
 
-nav ul {
-   display: flex;
-   flex-basis: 50%;
-   justify-content: space-between;
+.index nav li {
+   &:first-child {
+      color: $accentColor;
+   }
 }
 
-nav li {
-   @include headerText(20px, 29px);
-}
-
-nav li a {
-   padding: 10px 15px;
+.blog nav li {
+   &:nth-child(3) {
+      color: $accentColor;
+   }
 }
