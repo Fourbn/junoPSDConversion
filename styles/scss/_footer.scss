@@ -5,6 +5,7 @@ footer {
    background: $accentColor;
 
    p {
+      width: 100%;
       @include bodyText();
       color: $mainBackground;
       text-align: center;

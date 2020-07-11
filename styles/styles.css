@@ -677,6 +677,62 @@ aside {
   width: 100%;
 }
 
+.contactForm .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contactCompany {
+  background: #0f614e;
+  width: 60%;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.contactCompany .nameInput,
+.contactCompany .emailInput {
+  height: 50px;
+  width: calc(50% - 40px);
+  margin: 20px;
+  border: none;
+  border-bottom: 2px solid #86e0f9;
+  background: #0f614e;
+}
+
+.contactCompany .userComment {
+  width: 100%;
+  height: 250px;
+  margin: 0 20px;
+  border: 2px solid #86e0f9;
+  background: #0f614e;
+}
+
+.contactCompany .submit {
+  width: 100%;
+  margin: 20px;
+  border: none;
+  background: #0c1423;
+  color: #fff;
+}
+
 footer {
   height: 100%;
   display: -webkit-box;
@@ -689,6 +745,7 @@ footer {
 }
 
 footer p {
+  width: 100%;
   font-family: 'Lato', sans-serif;
   font-size: 1.5rem;
   line-height: 32px;
