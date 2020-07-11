@@ -1,0 +1,106 @@
+section,
+article,
+aside {
+   background-color: $mainBackground;
+   @include bodyText();
+   
+}
+
+.readMore {
+   @include button($accentColor, $mainBackground);
+}
+
+// INDEX PAGE
+.index {
+   h2 {
+      @include headerText(4.2rem, auto);
+   }
+   
+   h3 {
+      @include headerText(3.2rem, auto);
+   }
+}
+
+.aboutSection {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+
+   h2 {
+      margin-top: 10px;
+   }
+
+   p {
+      text-align: left;
+      width: 80%;
+      margin: 27px auto;
+   }
+}
+
+.mainArticles {
+   background: $secondaryBackground;
+   
+   .readMore {
+      @include button($mainBackground, #fff);
+   }
+
+   .newAdditions,
+   .meetNemo {
+      // height: 387px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      
+      .newAdditionsText,
+      .meetNemoText {
+         flex: 1 1 320px;
+         max-width: 520px;
+         
+         p {
+            margin: 27px auto;
+         }
+      }
+
+      .newAdditionsText {
+         padding: 30px 30px 45px 30px;
+      }
+
+      .meetNemoText {
+         padding: 45px 30px 30px 30px;
+      }
+      
+      .newAdditionsImage,
+      .meetNemoImage {
+         flex: 1 2 415px;
+         max-width: 515px;
+         box-shadow: 30px 30px $accentColor;
+         position: relative;
+         
+         img {
+            width: 100%;
+         }
+      }
+      
+      .newAdditionsImage {
+         order: -1;
+         left: -32px;
+         top: -34px;
+      }
+      
+      .meetNemoImage {
+         bottom: -5px;
+         right: -2px;
+      }
+   }
+
+
+   .meetNemo {
+      margin-top: 30px;
+      text-align: right;
+   }
+}
+
