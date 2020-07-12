@@ -6,6 +6,7 @@
    <title>Contact Us</title>
    <link rel="stylesheet" href="./styles/styles.css">
    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Lato&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/08bb3c9c2d.js" crossorigin="anonymous"></script>
 </head>
 <body class="contact">
    <header>
@@ -21,37 +22,43 @@
          <h1>Get in touch</h1>
       </div>
    </header>
-   <section class="contactForm">
-      <div class="wrapper">
-         <form action="contactCompany" class="contactCompany">
-            <label for="nameInput" class="sr-only">Name:</label>
-            <input type="text" id="nameInput" class="nameInput">
-            
-            <label for="emailInput" class="sr-only">Email address:</label>
-            <input type="email" id="emailInput" class="emailInput">
-            
-            <label for="userComment" class="sr-only">Post your comment here:</label>
-            <textarea name="userComment" id="userComment" class="userComment"></textarea>
-            
-            <button type="submit" class="readMore submit">Submit</button>
-         </form>
-      </div>
-   </section>
-   <aside class="contactInfo">
-      <div class="wrapper">
-         <ul class="socialMedia">
-            <li><a href="#">Fb</a></li>
-            <li><a href="#">In</a></li>
-            <li><a href="#">Tw</a></li>
-            <li><a href="#">WA</a></li>
-         </ul>
-         <h2>info@email.com</h2>
-         <p>123-456-7890</p>
-         <p>123 Queen Street West, Unit 10</p>
-         <p>Toronto, Ontario</p>
-         <p>M5V2D5</p>
-      </div>
-   </aside>
+   <div class="contactContainer">
+      <section class="contactSection">
+         <div class="wrapper">
+            <form action="contactForm" class="contactForm">
+               <label for="nameInput" class="sr-only">Name:</label>
+               <input type="text" id="nameInput" class="nameInput" placeholder="Name">
+               
+               <label for="emailInput" class="sr-only">Email address:</label>
+               <input type="email" id="emailInput" class="emailInput" placeholder="Email address">
+               
+               <label for="userComment" class="sr-only">Post your comment here:</label>
+               <textarea name="userComment" id="userComment" class="userComment" placeholder="Message"></textarea>
+               
+               <button type="submit" class="readMore submit">Submit</button>
+            </form>
+         </div>
+      </section>
+      <aside class="contactInfo">
+         <div class="wrapper">
+            <ul class="socialMedia">
+               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+               <li>
+                  <a href="#">
+                     <i class="fab fa-whatsapp"></i>
+                  </a>
+               </li>
+            </ul>
+            <h2>info@email.com</h2>
+            <p>123-456-7890</p>
+            <p>123 Queen Street West, Unit 10</p>
+            <p>Toronto, Ontario</p>
+            <p>M5V2D5</p>
+         </div>
+      </aside>
+   </div>
    <footer>
       <p>Copyright © 2018 Juno College</p>
    </footer>

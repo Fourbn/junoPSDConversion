@@ -264,6 +264,8 @@ nav {
           justify-content: flex-end;
   height: 10vh;
   width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 nav ul {
@@ -319,15 +321,7 @@ header .wrapper {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 100vh;
-}
-
-header nav {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  height: 100%;
 }
 
 header h1 {
@@ -348,6 +342,12 @@ header h1 {
 
 .contact header {
   background-image: url(../assets/contact-header.jpg);
+  height: 80vh;
+}
+
+.contact header h1 {
+  padding-bottom: 100px;
+  padding-right: 0;
 }
 
 .index header {
@@ -677,7 +677,61 @@ aside {
   width: 100%;
 }
 
-.contactForm .wrapper {
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #0c1423;
+}
+
+.contactInfo {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 230px;
+          flex: 1 0 230px;
+  max-width: 370px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 50px;
+}
+
+.contactInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactInfo ul .fab {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 2rem;
+}
+
+.contactInfo h2 {
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.contactInfo p {
+  line-height: 2.7rem;
+}
+
+.contactSection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 400px;
+          flex: 1 0 400px;
+  max-width: 800px;
+}
+
+.contactSection .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,9 +740,9 @@ aside {
           justify-content: flex-end;
 }
 
-.contactCompany {
+.contactForm {
   background: #0f614e;
-  width: 60%;
+  width: 100%;
   padding: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -705,27 +759,65 @@ aside {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-shadow: -30px 30px #86e0f9;
+          box-shadow: -30px 30px #86e0f9;
+  position: relative;
+  top: -190px;
+  right: 15px;
 }
 
-.contactCompany .nameInput,
-.contactCompany .emailInput {
+.contactForm .nameInput,
+.contactForm .emailInput,
+.contactForm .userComment {
+  background: #0f614e;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: #fff;
+  padding: 5px 20px;
+}
+
+.contactForm .nameInput::-webkit-input-placeholder,
+.contactForm .emailInput::-webkit-input-placeholder,
+.contactForm .userComment::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.contactForm .nameInput:-ms-input-placeholder,
+.contactForm .emailInput:-ms-input-placeholder,
+.contactForm .userComment:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contactForm .nameInput::-ms-input-placeholder,
+.contactForm .emailInput::-ms-input-placeholder,
+.contactForm .userComment::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contactForm .nameInput::placeholder,
+.contactForm .emailInput::placeholder,
+.contactForm .userComment::placeholder {
+  opacity: 1;
+}
+
+.contactForm .nameInput,
+.contactForm .emailInput {
   height: 50px;
   width: calc(50% - 40px);
   margin: 20px;
   border: none;
   border-bottom: 2px solid #86e0f9;
-  background: #0f614e;
 }
 
-.contactCompany .userComment {
+.contactForm .userComment {
   width: 100%;
-  height: 250px;
+  height: 200px;
   margin: 0 20px;
   border: 2px solid #86e0f9;
-  background: #0f614e;
 }
 
-.contactCompany .submit {
+.contactForm .submit {
   width: 100%;
   margin: 20px;
   border: none;
