@@ -677,6 +677,106 @@ aside {
   width: 100%;
 }
 
+.blog main {
+  background: #0c1423;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.discoveringSpecies {
+  width: 65%;
+  position: relative;
+  top: -210px;
+  right: -162px;
+}
+
+.discoveringSpecies .blogImage {
+  width: 100%;
+  -webkit-box-shadow: -30px 30px #86e0f9;
+          box-shadow: -30px 30px #86e0f9;
+  position: relative;
+  left: 30px;
+}
+
+.discoveringSpecies .blogImage img {
+  width: 100%;
+}
+
+.discoveringSpecies .blogText {
+  padding: 60px;
+  padding-left: 40px;
+  border: 5px solid #86e0f9;
+  border-right: none;
+  border-top: none;
+}
+
+.discoveringSpecies .blogText .bydate {
+  margin-bottom: 40px;
+}
+
+.otherBlogs {
+  background: #0f614e;
+  height: 570px;
+  -webkit-box-flex: 4;
+      -ms-flex: 4 0 250px;
+          flex: 4 0 250px;
+  max-width: 250px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  position: relative;
+  right: -90px;
+  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.otherBlogs .sideImage {
+  width: 320px;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+}
+
+.otherBlogs .sideImage img {
+  width: 100%;
+}
+
+.otherBlogs .sideText {
+  padding: 15px;
+}
+
+.otherBlogs .sideText h3 {
+  text-transform: uppercase;
+  margin: 25px 0;
+  margin-bottom: 5px;
+}
+
+.otherBlogs .sideText p {
+  line-height: 2.2rem;
+}
+
+.otherBlogs .sideText ul {
+  padding-left: 15px;
+}
+
+.otherBlogs .sideText ul li {
+  list-style: disc;
+  padding-left: 7px;
+}
+
 .contactContainer {
   display: -webkit-box;
   display: -ms-flexbox;
