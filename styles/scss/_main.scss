@@ -105,7 +105,8 @@ aside {
 }
 
 .siteMap {
-   height: 90vh;
+   height: 100%;
+   padding: 130px 0;
    // display: flex;
    // flex-direction: column;
    // justify-content: center;
@@ -127,6 +128,7 @@ aside {
          flex: 1 0 443px;
          max-width: 500px;
          padding-left: 5px;
+         padding-right: 50px;
 
          .fa-li {
             left: -2.4em;
@@ -171,21 +173,27 @@ aside {
 
    .wrapper {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
 
       .monthProfileText {
          // align-self: center;
-         flex: 0 1 750px;
+         flex: 1 0 400px;
 
          p {
-            margin: 27px 0;
+            margin: 40px 0;
          }
       }
 
       .monthProfileImage {
          order: -1;
-         flex: 0 0 275px;
+         flex: 1 0 200px;
          box-shadow: 30px 30px $accentColor;
+         margin-right: 45px;
+         margin-bottom: 45px;
+         height: 100%;
+         max-width: 275px;
+         max-height: 275px;
 
          img {
             width: 100%;
@@ -217,8 +225,6 @@ aside {
 
 
 // BLOG PAGE
-// * {border: red solid 1px;}
-
 .blog main {
    background: $mainBackground;
    display: flex;
@@ -228,11 +234,15 @@ aside {
 }
 
 .discoveringSpecies {
-   background-color: none;
+   background: none;
    flex: 1 0 450px;
    max-width: 800px;
    position: relative;
-   top: -214px;
+   top: -300px;
+
+   h1 {
+      padding-bottom: 15px;
+   }
 
    .blogImage {
       box-shadow: -30px 30px $accentColor;
@@ -256,6 +266,7 @@ aside {
       }
    }
 }
+
 .comments {
    margin-right: 110px;
 
@@ -265,6 +276,7 @@ aside {
 
    .commentBox {
       display: flex;
+      margin-bottom: 40px;
       
       .userImage {
          height: 200px;
@@ -328,6 +340,8 @@ aside {
    order: -1;
    margin: 20px 50px;
    height: 100%;
+   position: relative;
+   top: 200px;
 
    .sideImage {
       position: relative;
@@ -375,18 +389,21 @@ aside {
 // CONTACT PAGE
 .contactContainer {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    flex-wrap: wrap;
    background: $mainBackground;
+   margin-bottom: -30px;
 }
 
 .contactInfo {
    order: -1;
    width: 30%;
-   flex: 1 0 230px;
-   max-width: 370px;
+   flex: 3 3 230px;
+   max-width: 230px;
    align-self: center;
    margin: 0 50px;
+   position: relative;
+   top: 5px;
 
    ul {
       display: flex;
@@ -409,8 +426,18 @@ aside {
 }
 
 .contactSection {
-   flex: 1 0 400px;
-   max-width: 800px;
+   background: none;
+   flex: 1 1 550px;
+   max-width: 900px;
+   position: relative;
+   top: -240px;
+   right: 15px;
+   height: 530px;
+
+   h1 {
+      padding-left: 15px;
+      padding-bottom: 15px;
+   }
 }
 
 .contactSection .wrapper {
@@ -428,9 +455,6 @@ aside {
    justify-content: space-evenly;
    align-items: flex-end;
    box-shadow: -30px 30px $accentColor;
-   position: relative;
-   top: -190px;
-   right: 15px;
 
    .nameInput,
    .emailInput, 

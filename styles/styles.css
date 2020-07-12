@@ -315,16 +315,7 @@ header {
   background-size: cover;
 }
 
-header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 100%;
-}
-
-header h1 {
+h1 {
   color: #fff;
   font-family: 'Barlow', sans-serif;
   font-size: 8rem;
@@ -332,22 +323,16 @@ header h1 {
   line-height: 92px;
   letter-spacing: 1;
   text-transform: uppercase;
-  margin: 0 auto;
-  padding-right: 100px;
 }
 
 .blog header {
   background-image: url(../assets/blog-header.jpg);
+  height: 80vh;
 }
 
 .contact header {
   background-image: url(../assets/contact-header.jpg);
   height: 80vh;
-}
-
-.contact header h1 {
-  padding-bottom: 100px;
-  padding-right: 0;
 }
 
 .index header {
@@ -356,14 +341,29 @@ header h1 {
   position: relative;
 }
 
+.index header .headerContents {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 55px;
+}
+
 .index header .headerImage {
-  position: absolute;
-  top: 153px;
+  position: relative;
+  top: 20px;
   right: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 440px;
+          flex: 1 0 440px;
+  max-width: 700px;
 }
 
 .index header .headerImage img {
-  width: 55vw;
+  width: 100%;
 }
 
 .index header h1 {
@@ -375,8 +375,7 @@ header h1 {
   letter-spacing: auto;
   text-transform: uppercase;
   max-width: 450px;
-  margin-top: 73px;
-  margin-left: 50px;
+  margin-left: 2.5%;
 }
 
 section,
@@ -546,7 +545,8 @@ aside {
 }
 
 .siteMap {
-  height: 90vh;
+  height: 100%;
+  padding: 130px 0;
 }
 
 .siteMap .wrapper {
@@ -575,6 +575,7 @@ aside {
           flex: 1 0 443px;
   max-width: 500px;
   padding-left: 5px;
+  padding-right: 50px;
 }
 
 .siteMap ul li .fa-li {
@@ -620,29 +621,36 @@ aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .monthProfile .wrapper .monthProfileText {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 750px;
-          flex: 0 1 750px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 400px;
+          flex: 1 0 400px;
 }
 
 .monthProfile .wrapper .monthProfileText p {
-  margin: 27px 0;
+  margin: 40px 0;
 }
 
 .monthProfile .wrapper .monthProfileImage {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 275px;
-          flex: 0 0 275px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
   -webkit-box-shadow: 30px 30px #86e0f9;
           box-shadow: 30px 30px #86e0f9;
+  margin-right: 45px;
+  margin-bottom: 45px;
+  height: 100%;
+  max-width: 275px;
+  max-height: 275px;
 }
 
 .monthProfile .wrapper .monthProfileImage img {
@@ -691,13 +699,17 @@ aside {
 }
 
 .discoveringSpecies {
-  background-color: none;
+  background: none;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 450px;
           flex: 1 0 450px;
   max-width: 800px;
   position: relative;
-  top: -214px;
+  top: -300px;
+}
+
+.discoveringSpecies h1 {
+  padding-bottom: 15px;
 }
 
 .discoveringSpecies .blogImage {
@@ -735,6 +747,7 @@ aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 40px;
 }
 
 .comments .commentBox .userImage {
@@ -821,6 +834,8 @@ aside {
           order: -1;
   margin: 20px 50px;
   height: 100%;
+  position: relative;
+  top: 200px;
 }
 
 .otherBlogs .sideImage {
@@ -870,11 +885,13 @@ aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: #0c1423;
+  margin-bottom: -30px;
 }
 
 .contactInfo {
@@ -882,14 +899,16 @@ aside {
       -ms-flex-order: -1;
           order: -1;
   width: 30%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 230px;
-          flex: 1 0 230px;
-  max-width: 370px;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 230px;
+          flex: 3 3 230px;
+  max-width: 230px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin: 0 50px;
+  position: relative;
+  top: 5px;
 }
 
 .contactInfo ul {
@@ -914,10 +933,20 @@ aside {
 }
 
 .contactSection {
+  background: none;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 400px;
-          flex: 1 0 400px;
-  max-width: 800px;
+      -ms-flex: 1 1 550px;
+          flex: 1 1 550px;
+  max-width: 900px;
+  position: relative;
+  top: -240px;
+  right: 15px;
+  height: 530px;
+}
+
+.contactSection h1 {
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
 
 .contactSection .wrapper {
@@ -950,9 +979,6 @@ aside {
           align-items: flex-end;
   -webkit-box-shadow: -30px 30px #86e0f9;
           box-shadow: -30px 30px #86e0f9;
-  position: relative;
-  top: -190px;
-  right: 15px;
 }
 
 .contactForm .nameInput,
