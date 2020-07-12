@@ -3,7 +3,6 @@ article,
 aside {
    background-color: $mainBackground;
    @include bodyText();
-   
 }
 
 .readMore {
@@ -41,72 +40,88 @@ aside {
 
 .mainArticles {
    background: $secondaryBackground;
+   padding: 40px 0;
    
    .readMore {
       @include button($mainBackground, #fff);
    }
 
-   .newAdditions,
-   .meetNemo {
-      // height: 387px;
+   .mainArticlesContainer {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
-      position: relative;
-      
-      .newAdditionsText,
-      .meetNemoText {
-         flex: 1 1 320px;
-         max-width: 520px;
-         
-         p {
-            margin: 27px auto;
-         }
+      height: 100%;
+   }
+
+   .newAdditionsText,
+   .meetNemoText {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 330px;
+      max-width: 530px;
+
+      .readMore {
+         width: 150px;
       }
 
-      .newAdditionsText {
-         padding: 30px 30px 45px 30px;
-      }
-
-      .meetNemoText {
-         padding: 45px 30px 30px 30px;
-      }
-      
-      .newAdditionsImage,
-      .meetNemoImage {
-         flex: 1 2 415px;
-         max-width: 515px;
-         box-shadow: 30px 30px $accentColor;
-         position: relative;
-         
-         img {
-            width: 100%;
-         }
-      }
-      
-      .newAdditionsImage {
-         order: -1;
-         left: -32px;
-         top: -34px;
-      }
-      
-      .meetNemoImage {
-         bottom: -5px;
-         right: -2px;
+      p {
+         margin: 30px 0;
       }
    }
 
+   .newAdditionsText {
+      padding: 0 30px 0 15px;
+      margin: 0 2.5% 0 30px;
+   }
 
-   .meetNemo {
-      margin-top: 30px;
+   .meetNemoText {
+      justify-content: flex-end;
       text-align: right;
+      margin: 0 30px 0 2.5%;
+      padding: 0 15px 0 30px;
+      
+      .readMore {
+         align-self: flex-end;
+      }
+   }
+   
+   .newAdditionsImage,
+   .meetNemoImage {
+      margin-bottom: 30px;
+      max-width: 550px;
+      flex: 1 0 550px;
+      height: 280px;
+      
+      img {
+         width: 100%;
+      }
+   }
+   
+   .newAdditionsImage {
+      order: -1;
+      margin-right: 30px;
+      position: relative;
+      top: -70px;
+      
+      img {
+         box-shadow: 30px 30px $accentColor;
+      }
+   }
+   
+   .meetNemoImage {
+      margin-left: 30px;
+      position: relative;
+      bottom: -50px;
+      
+      img {
+         box-shadow: -30px 30px $accentColor;
+      }
    }
 }
 
 .siteMap {
    height: 100%;
-   padding: 130px 0;
+   padding: 100px 0;
    // display: flex;
    // flex-direction: column;
    // justify-content: center;
@@ -123,7 +138,7 @@ aside {
       align-items: center;
 
       li {
-         margin: 0 10px;
+         margin: 30px 10px;
          min-height: calc(32px + 96px);
          flex: 1 0 443px;
          max-width: 500px;

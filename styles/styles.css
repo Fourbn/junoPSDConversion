@@ -336,8 +336,8 @@ h1 {
 }
 
 .index header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../assets/header-image.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/header-image.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5%, rgba(0, 0, 0, 0.8)), color-stop(60%, rgba(0, 0, 0, 0.1))), url(../assets/header-image.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0.1) 60%), url(../assets/header-image.jpg);
   position: relative;
 }
 
@@ -447,6 +447,7 @@ aside {
 
 .mainArticles {
   background: #0f614e;
+  padding: 40px 0;
 }
 
 .mainArticles .readMore {
@@ -461,8 +462,7 @@ aside {
   text-transform: uppercase;
 }
 
-.mainArticles .newAdditions,
-.mainArticles .meetNemo {
+.mainArticles .mainArticlesContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,82 +471,96 @@ aside {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
+  height: 100%;
 }
 
-.mainArticles .newAdditions .newAdditionsText,
-.mainArticles .newAdditions .meetNemoText,
-.mainArticles .meetNemo .newAdditionsText,
-.mainArticles .meetNemo .meetNemoText {
+.mainArticles .newAdditionsText,
+.mainArticles .meetNemoText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 320px;
-          flex: 1 1 320px;
-  max-width: 520px;
+      -ms-flex: 1 0 330px;
+          flex: 1 0 330px;
+  max-width: 530px;
 }
 
-.mainArticles .newAdditions .newAdditionsText p,
-.mainArticles .newAdditions .meetNemoText p,
-.mainArticles .meetNemo .newAdditionsText p,
-.mainArticles .meetNemo .meetNemoText p {
-  margin: 27px auto;
+.mainArticles .newAdditionsText .readMore,
+.mainArticles .meetNemoText .readMore {
+  width: 150px;
 }
 
-.mainArticles .newAdditions .newAdditionsText,
-.mainArticles .meetNemo .newAdditionsText {
-  padding: 30px 30px 45px 30px;
+.mainArticles .newAdditionsText p,
+.mainArticles .meetNemoText p {
+  margin: 30px 0;
 }
 
-.mainArticles .newAdditions .meetNemoText,
-.mainArticles .meetNemo .meetNemoText {
-  padding: 45px 30px 30px 30px;
+.mainArticles .newAdditionsText {
+  padding: 0 30px 0 15px;
+  margin: 0 2.5% 0 30px;
 }
 
-.mainArticles .newAdditions .newAdditionsImage,
-.mainArticles .newAdditions .meetNemoImage,
-.mainArticles .meetNemo .newAdditionsImage,
-.mainArticles .meetNemo .meetNemoImage {
+.mainArticles .meetNemoText {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  margin: 0 30px 0 2.5%;
+  padding: 0 15px 0 30px;
+}
+
+.mainArticles .meetNemoText .readMore {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.mainArticles .newAdditionsImage,
+.mainArticles .meetNemoImage {
+  margin-bottom: 30px;
+  max-width: 550px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 2 415px;
-          flex: 1 2 415px;
-  max-width: 515px;
-  -webkit-box-shadow: 30px 30px #86e0f9;
-          box-shadow: 30px 30px #86e0f9;
-  position: relative;
+      -ms-flex: 1 0 550px;
+          flex: 1 0 550px;
+  height: 280px;
 }
 
-.mainArticles .newAdditions .newAdditionsImage img,
-.mainArticles .newAdditions .meetNemoImage img,
-.mainArticles .meetNemo .newAdditionsImage img,
-.mainArticles .meetNemo .meetNemoImage img {
+.mainArticles .newAdditionsImage img,
+.mainArticles .meetNemoImage img {
   width: 100%;
 }
 
-.mainArticles .newAdditions .newAdditionsImage,
-.mainArticles .meetNemo .newAdditionsImage {
+.mainArticles .newAdditionsImage {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  left: -32px;
-  top: -34px;
+  margin-right: 30px;
+  position: relative;
+  top: -70px;
 }
 
-.mainArticles .newAdditions .meetNemoImage,
-.mainArticles .meetNemo .meetNemoImage {
-  bottom: -5px;
-  right: -2px;
+.mainArticles .newAdditionsImage img {
+  -webkit-box-shadow: 30px 30px #86e0f9;
+          box-shadow: 30px 30px #86e0f9;
 }
 
-.mainArticles .meetNemo {
-  margin-top: 30px;
-  text-align: right;
+.mainArticles .meetNemoImage {
+  margin-left: 30px;
+  position: relative;
+  bottom: -50px;
+}
+
+.mainArticles .meetNemoImage img {
+  -webkit-box-shadow: -30px 30px #86e0f9;
+          box-shadow: -30px 30px #86e0f9;
 }
 
 .siteMap {
   height: 100%;
-  padding: 130px 0;
+  padding: 100px 0;
 }
 
 .siteMap .wrapper {
@@ -568,7 +582,7 @@ aside {
 }
 
 .siteMap ul li {
-  margin: 0 10px;
+  margin: 30px 10px;
   min-height: calc(32px + 96px);
   -webkit-box-flex: 1;
       -ms-flex: 1 0 443px;
