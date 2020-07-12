@@ -679,27 +679,30 @@ aside {
 
 .blog main {
   background: #0c1423;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
 }
 
 .discoveringSpecies {
-  width: 65%;
+  background-color: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 450px;
+          flex: 1 0 450px;
+  max-width: 800px;
   position: relative;
-  top: -210px;
-  right: -162px;
+  top: -214px;
 }
 
 .discoveringSpecies .blogImage {
-  width: 100%;
   -webkit-box-shadow: -30px 30px #86e0f9;
           box-shadow: -30px 30px #86e0f9;
-  position: relative;
-  left: 30px;
 }
 
 .discoveringSpecies .blogImage img {
@@ -707,61 +710,147 @@ aside {
 }
 
 .discoveringSpecies .blogText {
-  padding: 60px;
-  padding-left: 40px;
+  padding: 60px 0 20px 40px;
+  margin-right: 80px;
   border: 5px solid #86e0f9;
   border-right: none;
   border-top: none;
+  position: relative;
+  left: -30px;
 }
 
 .discoveringSpecies .blogText .bydate {
   margin-bottom: 40px;
 }
 
-.otherBlogs {
-  background: #0f614e;
-  height: 570px;
-  -webkit-box-flex: 4;
-      -ms-flex: 4 0 250px;
-          flex: 4 0 250px;
-  max-width: 250px;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  position: relative;
-  right: -90px;
-  top: 50px;
+.comments {
+  margin-right: 110px;
+}
+
+.comments h3 {
+  margin: 20px 0;
+}
+
+.comments .commentBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+}
+
+.comments .commentBox .userImage {
+  height: 200px;
+  margin-right: 20px;
+  padding-top: 10px;
+}
+
+.comments .commentBox .userImage img {
+  width: 66px;
+  height: 66px;
+}
+
+.comments .commentBox .userComment p:last-child {
+  line-height: 2.3rem;
+  margin-top: 10px;
+}
+
+.comments .submitComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: -160px;
+}
+
+.comments .submitComment input, .comments .submitComment textarea {
+  background: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #86e0f9;
+  padding: 10px 20px;
+}
+
+.comments .submitComment input::-webkit-input-placeholder, .comments .submitComment textarea::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.comments .submitComment input:-ms-input-placeholder, .comments .submitComment textarea:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.comments .submitComment input::-ms-input-placeholder, .comments .submitComment textarea::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.comments .submitComment input::placeholder, .comments .submitComment textarea::placeholder {
+  opacity: 1;
+}
+
+.comments .submitComment input {
+  width: calc(50% - 20px);
+}
+
+.comments .submitComment textarea {
+  width: 100%;
+  margin: 20px 0;
+  border: 2px solid #86e0f9;
+  height: 200px;
+}
+
+.comments .submitComment .submit {
+  background: #0f614e;
+  width: 100%;
+  border: none;
+  color: #fff;
+}
+
+.otherBlogs {
+  background: #0f614e;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
+  max-width: 300px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin: 20px 50px;
+  height: 100%;
 }
 
 .otherBlogs .sideImage {
-  width: 320px;
-  position: absolute;
+  position: relative;
+  left: -60px;
   top: -20px;
-  right: 20px;
+  width: 340px;
+  height: 200px;
+  overflow: hidden;
 }
 
 .otherBlogs .sideImage img {
   width: 100%;
+  -webkit-transform: translateY(-18%);
+          transform: translateY(-18%);
 }
 
 .otherBlogs .sideText {
   padding: 15px;
+  padding-top: 0;
 }
 
 .otherBlogs .sideText h3 {
   text-transform: uppercase;
   margin: 25px 0;
   margin-bottom: 5px;
+}
+
+.otherBlogs .sideText h3:first-child {
+  margin-top: 0;
 }
 
 .otherBlogs .sideText p {
