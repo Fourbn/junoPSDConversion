@@ -17,7 +17,8 @@ nav {
          a {
             padding: 10px 15px;
 
-            &:hover {
+            &:hover,
+            &:focus {
                color: $accentColor;
             }
          }

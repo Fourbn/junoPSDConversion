@@ -7,6 +7,11 @@ aside {
 
 .readMore {
    @include button($accentColor, $mainBackground);
+
+   &:hover,
+   &:focus {
+      @include buttonTransition($mainBackground, #fff, #fff)
+   }
 }
 
 // INDEX PAGE
@@ -33,7 +38,7 @@ aside {
 
    p {
       text-align: left;
-      width: 80%;
+      width: 70%;
       margin: 27px auto;
    }
 }
@@ -44,6 +49,11 @@ aside {
    
    .readMore {
       @include button($mainBackground, #fff);
+
+      &:hover,
+      &:focus {
+         @include buttonTransition($accentColor, $mainBackground, $accentColor);
+      }
    }
 
    .mainArticlesContainer {
@@ -122,21 +132,19 @@ aside {
 .siteMap {
    height: 100%;
    padding: 100px 0;
-   // display: flex;
-   // flex-direction: column;
-   // justify-content: center;
    
    .wrapper {
       height: 100%;
    }
 
+// general list text and positioning stylings
    ul {
       height: 100%;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       align-items: center;
-
+      
       li {
          margin: 30px 10px;
          min-height: calc(32px + 96px);
@@ -144,33 +152,53 @@ aside {
          max-width: 500px;
          padding-left: 5px;
          padding-right: 50px;
-
-         .fa-li {
-            left: -2.4em;
-         }
-
-         .fa-location-arrow,
-         .fa-users,
-         .fa-file,
-         .fa-phone {
-            color: $mainBackground;
-            font-size: 1.533em;
-            left: -5px;
-         }
-
-         .fa-circle {
-            color: $accentColor;
-            font-size: 2.8em;
-            position: relative;
-            left: -10px;
-            top: -5px;
-         }
       }
 
       li:nth-child(-n+2) {
          align-self: flex-end;
       }
    }
+
+// custom bullet stylings
+   .fa-li {
+      left: -2.4em;
+      
+      .fa-circle {
+         color: $accentColor;
+         font-size: 2.8em;
+         position: relative;
+         left: -10px;
+         top: -5px;
+      }
+
+      .fa-location-arrow,
+      .fa-users,
+      .fa-file,
+      .fa-phone {
+         color: $mainBackground;
+         font-size: 1.533em;
+         top: 0.3px;
+      }
+   
+      .fa-location-arrow {
+         left: -5.4px;
+         top: 1px;
+      }
+
+      .fa-users {
+         left: -4px;
+      }
+
+      .fa-file {
+         left: -3.5px;
+      }
+
+      .fa-phone {
+         left: -4px;
+      }
+   }
+
+
 }
 
 .aquariumView {
@@ -184,7 +212,7 @@ aside {
 }
 
 .monthProfile {
-   padding: 110px 0;
+   padding: 110px 70px;
 
    .wrapper {
       display: flex;
@@ -192,8 +220,8 @@ aside {
       justify-content: space-around;
 
       .monthProfileText {
-         // align-self: center;
          flex: 1 0 400px;
+         margin-left: 50px;
 
          p {
             margin: 40px 0;
@@ -291,10 +319,10 @@ aside {
 
    .commentBox {
       display: flex;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      height: 100%;
       
       .userImage {
-         height: 200px;
          margin-right: 20px;
          padding-top: 10px;
 
@@ -314,7 +342,7 @@ aside {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-bottom: -160px;
+      margin-bottom: -200px;
       
       input, textarea {
          background: none;
@@ -325,6 +353,10 @@ aside {
          
          &::placeholder {
             opacity: 1;
+         }
+
+         &:focus {
+            border: 2px solid $accentColor;
          }
       }
       
@@ -342,8 +374,12 @@ aside {
       .submit {
          background: $secondaryBackground;
          width: 100%;
-         border: none;
+         border: 2px solid $secondaryBackground;
          color: #fff;
+
+         &:focus {
+            border: 2px solid $accentColor;
+         }
       }
    }
 }
@@ -388,6 +424,16 @@ aside {
 
       p {
          line-height: 2.2rem;
+
+         a {
+            border-bottom: 1px solid $secondaryBackground;
+            
+            &:hover,
+            &:focus {
+               border-bottom: 1px solid white;
+            }
+         }
+
       }
 
       ul { 
@@ -423,10 +469,18 @@ aside {
    ul {
       display: flex;
 
+      a:focus {
+         color: $accentColor;
+      }
+
       .fab {
          display: inline-block;
          margin-right: 30px;
          font-size: 2rem;
+
+         &:hover {
+            color: $accentColor;
+         }
       }
    }
 
@@ -488,8 +542,12 @@ aside {
       height: 50px;
       width: calc(50% - 40px);
       margin: 20px;
-      border: none;
+      border: 2px solid $secondaryBackground;
       border-bottom: 2px solid $accentColor;
+
+      &:focus {
+         border-color: $accentColor;
+      }
    }
 
    .userComment {
@@ -502,8 +560,12 @@ aside {
    .submit {
       width: 100%;
       margin: 20px;
-      border: none;
+      border: 2px solid $mainBackground;
       background: $mainBackground;
       color: #fff;
+
+      &:focus {
+         border: 2px solid $accentColor;
+      }
    }
 }

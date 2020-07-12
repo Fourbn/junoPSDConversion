@@ -18,6 +18,7 @@
 @mixin button($bgColor, $fontColor) {
    background: $bgColor;
    color: $fontColor;
+   border: 2px solid $bgColor;
    font-family: 'Barlow', sans-serif;
    font-size: 1.5rem;
    text-align: center;
@@ -25,5 +26,12 @@
    letter-spacing: 1;
    padding: 5px 25px;
    text-transform: uppercase;
+   transition: background .3s, color .3s, border .3s;
+}
 
+@mixin buttonTransition($bgColor, $fontColor, $border) {
+   background: $bgColor;
+   color: $fontColor;
+   border: 2px solid $border;
+   transition: background .3s, color .3s, border .3s;
 }

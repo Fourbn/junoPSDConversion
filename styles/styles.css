@@ -293,7 +293,7 @@ nav ul li a {
   padding: 10px 15px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:focus {
   color: #86e0f9;
 }
 
@@ -391,6 +391,7 @@ aside {
 .readMore {
   background: #86e0f9;
   color: #0c1423;
+  border: 2px solid #86e0f9;
   font-family: 'Barlow', sans-serif;
   font-size: 1.5rem;
   text-align: center;
@@ -398,6 +399,16 @@ aside {
   letter-spacing: 1;
   padding: 5px 25px;
   text-transform: uppercase;
+  -webkit-transition: background .3s, color .3s, border .3s;
+  transition: background .3s, color .3s, border .3s;
+}
+
+.readMore:hover, .readMore:focus {
+  background: #0c1423;
+  color: #fff;
+  border: 2px solid #fff;
+  -webkit-transition: background .3s, color .3s, border .3s;
+  transition: background .3s, color .3s, border .3s;
 }
 
 .index h2 {
@@ -441,7 +452,7 @@ aside {
 
 .aboutSection p {
   text-align: left;
-  width: 80%;
+  width: 70%;
   margin: 27px auto;
 }
 
@@ -453,6 +464,7 @@ aside {
 .mainArticles .readMore {
   background: #0c1423;
   color: #fff;
+  border: 2px solid #0c1423;
   font-family: 'Barlow', sans-serif;
   font-size: 1.5rem;
   text-align: center;
@@ -460,6 +472,16 @@ aside {
   letter-spacing: 1;
   padding: 5px 25px;
   text-transform: uppercase;
+  -webkit-transition: background .3s, color .3s, border .3s;
+  transition: background .3s, color .3s, border .3s;
+}
+
+.mainArticles .readMore:hover, .mainArticles .readMore:focus {
+  background: #86e0f9;
+  color: #0c1423;
+  border: 2px solid #86e0f9;
+  -webkit-transition: background .3s, color .3s, border .3s;
+  transition: background .3s, color .3s, border .3s;
 }
 
 .mainArticles .mainArticlesContainer {
@@ -592,20 +614,16 @@ aside {
   padding-right: 50px;
 }
 
-.siteMap ul li .fa-li {
+.siteMap ul li:nth-child(-n+2) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.siteMap .fa-li {
   left: -2.4em;
 }
 
-.siteMap ul li .fa-location-arrow,
-.siteMap ul li .fa-users,
-.siteMap ul li .fa-file,
-.siteMap ul li .fa-phone {
-  color: #0c1423;
-  font-size: 1.533em;
-  left: -5px;
-}
-
-.siteMap ul li .fa-circle {
+.siteMap .fa-li .fa-circle {
   color: #86e0f9;
   font-size: 2.8em;
   position: relative;
@@ -613,9 +631,30 @@ aside {
   top: -5px;
 }
 
-.siteMap ul li:nth-child(-n+2) {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.siteMap .fa-li .fa-location-arrow,
+.siteMap .fa-li .fa-users,
+.siteMap .fa-li .fa-file,
+.siteMap .fa-li .fa-phone {
+  color: #0c1423;
+  font-size: 1.533em;
+  top: 0.3px;
+}
+
+.siteMap .fa-li .fa-location-arrow {
+  left: -5.4px;
+  top: 1px;
+}
+
+.siteMap .fa-li .fa-users {
+  left: -4px;
+}
+
+.siteMap .fa-li .fa-file {
+  left: -3.5px;
+}
+
+.siteMap .fa-li .fa-phone {
+  left: -4px;
 }
 
 .aquariumView {
@@ -628,7 +667,7 @@ aside {
 }
 
 .monthProfile {
-  padding: 110px 0;
+  padding: 110px 70px;
 }
 
 .monthProfile .wrapper {
@@ -645,6 +684,7 @@ aside {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 400px;
           flex: 1 0 400px;
+  margin-left: 50px;
 }
 
 .monthProfile .wrapper .monthProfileText p {
@@ -761,11 +801,11 @@ aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  height: 100%;
 }
 
 .comments .commentBox .userImage {
-  height: 200px;
   margin-right: 20px;
   padding-top: 10px;
 }
@@ -789,7 +829,7 @@ aside {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: -160px;
+  margin-bottom: -200px;
 }
 
 .comments .submitComment input, .comments .submitComment textarea {
@@ -819,6 +859,10 @@ aside {
   opacity: 1;
 }
 
+.comments .submitComment input:focus, .comments .submitComment textarea:focus {
+  border: 2px solid #86e0f9;
+}
+
 .comments .submitComment input {
   width: calc(50% - 20px);
 }
@@ -833,8 +877,12 @@ aside {
 .comments .submitComment .submit {
   background: #0f614e;
   width: 100%;
-  border: none;
+  border: 2px solid #0f614e;
   color: #fff;
+}
+
+.comments .submitComment .submit:focus {
+  border: 2px solid #86e0f9;
 }
 
 .otherBlogs {
@@ -886,6 +934,14 @@ aside {
   line-height: 2.2rem;
 }
 
+.otherBlogs .sideText p a {
+  border-bottom: 1px solid #0f614e;
+}
+
+.otherBlogs .sideText p a:hover, .otherBlogs .sideText p a:focus {
+  border-bottom: 1px solid white;
+}
+
 .otherBlogs .sideText ul {
   padding-left: 15px;
 }
@@ -931,10 +987,18 @@ aside {
   display: flex;
 }
 
+.contactInfo ul a:focus {
+  color: #86e0f9;
+}
+
 .contactInfo ul .fab {
   display: inline-block;
   margin-right: 30px;
   font-size: 2rem;
+}
+
+.contactInfo ul .fab:hover {
+  color: #86e0f9;
 }
 
 .contactInfo h2 {
@@ -1035,8 +1099,13 @@ aside {
   height: 50px;
   width: calc(50% - 40px);
   margin: 20px;
-  border: none;
+  border: 2px solid #0f614e;
   border-bottom: 2px solid #86e0f9;
+}
+
+.contactForm .nameInput:focus,
+.contactForm .emailInput:focus {
+  border-color: #86e0f9;
 }
 
 .contactForm .userComment {
@@ -1049,9 +1118,13 @@ aside {
 .contactForm .submit {
   width: 100%;
   margin: 20px;
-  border: none;
+  border: 2px solid #0c1423;
   background: #0c1423;
   color: #fff;
+}
+
+.contactForm .submit:focus {
+  border: 2px solid #86e0f9;
 }
 
 footer {
