@@ -1,3 +1,4 @@
+// GENERAL STYLES
 nav {
    display: flex;
    justify-content: flex-end;
@@ -26,18 +27,21 @@ nav {
    }
 }
 
+//INDEX PAGE SPECIFIC
 .index nav li {
    &:first-child {
       color: $accentColor;
    }
 }
 
+//BLOG PAGE SPECIFIC
 .blog nav li {
    &:nth-child(3) {
       color: $accentColor;
    }
 }
 
+//CONTACT PAGE SPECIFIC
 .contact nav li {
    &:last-child {
       color: $accentColor;

@@ -1,25 +1,15 @@
+// GENERAL STYLES
 header {
    height: 100vh;
    background-position: center;
    background-size: cover;
 }
 
-      h1 {
-         @include headerText(8rem, 92px);
-         // height: 90vh;
+h1 {
+   @include headerText(8rem, 92px);
 }
 
-.blog header {
-   background-image: url(../assets/blog-header.jpg);
-   height: 80vh;
-}
-
-.contact header {
-   background-image: url(../assets/contact-header.jpg);
-   height: 80vh;
-}
-
-
+//INDEX PAGE SPECIFIC
 .index header {
    background-image: linear-gradient(rgba(0,0,0,.8) 5%, rgba(0,0,0,.1) 60%), url(../assets/header-image.jpg);
    position: relative;
@@ -37,17 +27,27 @@ header {
       right: 0;
       flex: 1 0 440px;
       max-width: 700px;
-
+      
       img {
          width: 100%;
       }
    }
-
+   
    h1 {
       @include headerText(13.8rem, 126px, auto);
       max-width: 450px;
       margin-left: 2.5%;
-      // margin-top: 73px;
-      // margin-left: 50px;
    }
+}
+
+//BLOG PAGE SPECIFIC 
+.blog header {
+   background-image: url(../assets/blog-header.jpg);
+   height: 80vh;
+}
+
+//CONTACT PAGE SPECIFIC
+.contact header {
+   background-image: url(../assets/contact-header.jpg);
+   height: 80vh;
 }

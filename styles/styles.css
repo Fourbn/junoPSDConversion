@@ -325,16 +325,6 @@ h1 {
   text-transform: uppercase;
 }
 
-.blog header {
-  background-image: url(../assets/blog-header.jpg);
-  height: 80vh;
-}
-
-.contact header {
-  background-image: url(../assets/contact-header.jpg);
-  height: 80vh;
-}
-
 .index header {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5%, rgba(0, 0, 0, 0.8)), color-stop(60%, rgba(0, 0, 0, 0.1))), url(../assets/header-image.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0.1) 60%), url(../assets/header-image.jpg);
@@ -376,6 +366,16 @@ h1 {
   text-transform: uppercase;
   max-width: 450px;
   margin-left: 2.5%;
+}
+
+.blog header {
+  background-image: url(../assets/blog-header.jpg);
+  height: 80vh;
+}
+
+.contact header {
+  background-image: url(../assets/contact-header.jpg);
+  height: 80vh;
 }
 
 section,
@@ -542,12 +542,12 @@ aside {
 
 .mainArticles .newAdditionsImage,
 .mainArticles .meetNemoImage {
-  margin-bottom: 30px;
+  height: 280px;
   max-width: 550px;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 550px;
           flex: 1 0 550px;
-  height: 280px;
+  margin-bottom: 30px;
 }
 
 .mainArticles .newAdditionsImage img,
@@ -581,12 +581,7 @@ aside {
 }
 
 .siteMap {
-  height: 100%;
   padding: 100px 0;
-}
-
-.siteMap .wrapper {
-  height: 100%;
 }
 
 .siteMap ul {
@@ -604,14 +599,13 @@ aside {
 }
 
 .siteMap ul li {
-  margin: 30px 10px;
   min-height: calc(32px + 96px);
   -webkit-box-flex: 1;
       -ms-flex: 1 0 443px;
           flex: 1 0 443px;
   max-width: 500px;
-  padding-left: 5px;
-  padding-right: 50px;
+  padding: 0 50px 0 5px;
+  margin: 30px 10px;
 }
 
 .siteMap ul li:nth-child(-n+2) {
@@ -698,13 +692,12 @@ aside {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 200px;
           flex: 1 0 200px;
-  -webkit-box-shadow: 30px 30px #86e0f9;
-          box-shadow: 30px 30px #86e0f9;
-  margin-right: 45px;
-  margin-bottom: 45px;
   height: 100%;
   max-width: 275px;
   max-height: 275px;
+  -webkit-box-shadow: 30px 30px #86e0f9;
+          box-shadow: 30px 30px #86e0f9;
+  margin: 0 45px 45px 0;
 }
 
 .monthProfile .wrapper .monthProfileImage img {
@@ -885,7 +878,7 @@ aside {
 .comments .submitComment .submit:hover, .comments .submitComment .submit:focus {
   background: #86e0f9;
   color: #0c1423;
-  border: 2px solid #fff;
+  border: 2px solid #86e0f9;
   -webkit-transition: background .3s, color .3s, border .3s;
   transition: background .3s, color .3s, border .3s;
 }
@@ -921,14 +914,12 @@ aside {
 }
 
 .otherBlogs .sideText {
-  padding: 15px;
-  padding-top: 0;
+  padding: 0 15px 15px 15px;
 }
 
 .otherBlogs .sideText h3 {
   text-transform: uppercase;
-  margin: 25px 0;
-  margin-bottom: 5px;
+  margin: 25px 0 5px 0;
 }
 
 .otherBlogs .sideText h3:first-child {
@@ -957,6 +948,7 @@ aside {
 }
 
 .contactContainer {
+  background: #0c1423;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -965,7 +957,6 @@ aside {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: #0c1423;
   margin-bottom: -30px;
 }
 
@@ -1028,8 +1019,7 @@ aside {
 }
 
 .contactSection h1 {
-  padding-left: 15px;
-  padding-bottom: 15px;
+  padding: 0 0 15px 15px;
 }
 
 .contactSection .wrapper {
@@ -1132,7 +1122,7 @@ aside {
 .contactForm .submit:hover, .contactForm .submit:focus {
   background: #86e0f9;
   color: #0c1423;
-  border: 2px solid #fff;
+  border: 2px solid #86e0f9;
   -webkit-transition: background .3s, color .3s, border .3s;
   transition: background .3s, color .3s, border .3s;
 }
