@@ -1148,3 +1148,13 @@ footer p {
   text-align: center;
   margin: 1px 0;
 }
+
+@media (max-width: 985px) {
+  .newAdditionsImage,
+  .meetNemoImage {
+    max-width: 350px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 350px;
+            flex: 1 0 350px;
+  }
+}
