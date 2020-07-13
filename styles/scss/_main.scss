@@ -376,9 +376,11 @@ aside {
          width: 100%;
          border: 2px solid $secondaryBackground;
          color: #fff;
+         cursor: pointer;
 
+         &:hover,
          &:focus {
-            border: 2px solid $accentColor;
+            @include buttonTransition($accentColor, $mainBackground, #fff);
          }
       }
    }
@@ -563,9 +565,11 @@ aside {
       border: 2px solid $mainBackground;
       background: $mainBackground;
       color: #fff;
-
+      cursor: pointer;
+      
+      &:hover,
       &:focus {
-         border: 2px solid $accentColor;
+         @include buttonTransition($accentColor, $mainBackground, #fff);
       }
    }
 }

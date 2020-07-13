@@ -879,10 +879,15 @@ aside {
   width: 100%;
   border: 2px solid #0f614e;
   color: #fff;
+  cursor: pointer;
 }
 
-.comments .submitComment .submit:focus {
-  border: 2px solid #86e0f9;
+.comments .submitComment .submit:hover, .comments .submitComment .submit:focus {
+  background: #86e0f9;
+  color: #0c1423;
+  border: 2px solid #fff;
+  -webkit-transition: background .3s, color .3s, border .3s;
+  transition: background .3s, color .3s, border .3s;
 }
 
 .otherBlogs {
@@ -1121,10 +1126,15 @@ aside {
   border: 2px solid #0c1423;
   background: #0c1423;
   color: #fff;
+  cursor: pointer;
 }
 
-.contactForm .submit:focus {
-  border: 2px solid #86e0f9;
+.contactForm .submit:hover, .contactForm .submit:focus {
+  background: #86e0f9;
+  color: #0c1423;
+  border: 2px solid #fff;
+  -webkit-transition: background .3s, color .3s, border .3s;
+  transition: background .3s, color .3s, border .3s;
 }
 
 footer {

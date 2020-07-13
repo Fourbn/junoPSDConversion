@@ -30,13 +30,13 @@
             <form action="contactForm" class="contactForm">
 
                <label for="nameInput" class="sr-only">Name:</label>
-               <input type="text" id="nameInput" class="nameInput" placeholder="Name">
+               <input type="text" name="nameInput" id="nameInput" class="nameInput" placeholder="Name" required>
                
                <label for="emailInput" class="sr-only">Email address:</label>
-               <input type="email" id="emailInput" class="emailInput" placeholder="Email address">
+               <input type="email" name="emailInput" id="emailInput" class="emailInput" placeholder="Email address" required>
                
                <label for="userComment" class="sr-only">Post your comment here:</label>
-               <textarea name="userComment" id="userComment" class="userComment" placeholder="Message"></textarea>
+               <textarea name="userComment" id="userComment" class="userComment" placeholder="Message" required></textarea>
                
                <button type="submit" class="readMore submit">Submit</button>
             </form>

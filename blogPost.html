@@ -49,15 +49,15 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi ut nemo exercitationem sapiente ea quaerat sit. Nulla quia vitae ad aliquam recusandae. Sint, quidem! Sint beatae eligendi autem, neque ullam maxime id ab accusamus.</p>
                </div>
             </div>
-            <form action="submitComment" class="submitComment">
+            <form action="submitComment" method="POST" name="submitComment" class="submitComment">
                <label for="nameInput" class="sr-only">Name:</label>
-               <input type="text" placeholder="Name">
+               <input type="text" name="nameInput" id="nameInput" placeholder="Name" required>
    
                <label for="emailInput" class="sr-only">Email address:</label>
-               <input type="email" placeholder="Email address">
+               <input type="email" name="emailInput" id="emailInput" placeholder="Email address" required>
    
-               <label for="comment" class="sr-only">Post your comment here:</label>
-               <textarea name="userComment" id="userComment" placeholder="Comment"></textarea>
+               <label for="userComment" class="sr-only">Post your comment here:</label>
+               <textarea name="userComment" id="userComment" placeholder="Comment" required></textarea>
    
                <button type="submit" class="readMore submit">Post comment</button>
             </form>
