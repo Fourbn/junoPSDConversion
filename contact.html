@@ -12,6 +12,7 @@
    <header>
       <div class="wrapper">
          <nav>
+            <!-- mobile nav button, hidden until width 550px -->
             <i class="fas fa-bars" aria-label="Mobile Navigation Button: Click to open Navigation Bar"></i>
             <ul>
                <li><a href="./index.html">Home</a></li>
@@ -22,29 +23,29 @@
          </nav>
          <div class="headerContents">
          </div>
-      </div>
+      </div> <!--wrapper ends here-->
    </header>
-   <main class="contactContainer">
-      <section class="contactSection">
-         <h1>Get in touch</h1>
-         <div class="wrapper">
-            <form action="contactForm" class="contactForm">
+   <main>
+      <div class="wrapper">
+         <section class="contactSection">
+            <h1>Get in touch</h1>
+            <div class="formContainer">
+               <form action="contactForm" class="contactForm">
 
-               <label for="nameInput" class="sr-only">Name:</label>
-               <input type="text" name="nameInput" id="nameInput" class="nameInput" placeholder="Name" required>
-               
-               <label for="emailInput" class="sr-only">Email address:</label>
-               <input type="email" name="emailInput" id="emailInput" class="emailInput" placeholder="Email address" required>
-               
-               <label for="userComment" class="sr-only">Post your comment here:</label>
-               <textarea name="userComment" id="userComment" class="userComment" placeholder="Message" required></textarea>
-               
-               <button type="submit" class="readMore submit">Submit</button>
-            </form>
-         </div>
-      </section>
-      <aside class="contactInfo">
-         <div class="wrapper">
+                  <label for="nameInput" class="sr-only">Name:</label>
+                  <input type="text" name="nameInput" id="nameInput" class="nameInput" placeholder="Name" required>
+                  
+                  <label for="emailInput" class="sr-only">Email address:</label>
+                  <input type="email" name="emailInput" id="emailInput" class="emailInput" placeholder="Email address" required>
+                  
+                  <label for="userComment" class="sr-only">Post your comment here:</label>
+                  <textarea name="userComment" id="userComment" class="userComment" placeholder="Message" required></textarea>
+                  
+                  <button type="submit" class="readMore submit">Submit</button>
+               </form>
+            </div>
+         </section>
+         <aside class="contactInfo">
             <ul class="socialMedia">
                <li>
                   <a href="#" aria-label="Click here to visit our Facebook page" title="Click here to visit our Facebook page">
@@ -74,11 +75,13 @@
                <p>Toronto, Ontario</p>
                <p>M5V2D5</p>
             </address>
-         </div>
-      </aside>
+         </aside>
+      </div> <!--wrapper ends here-->
    </main>
    <footer>
-      <p>Copyright © 2018 Juno College</p>
+      <div class="wrapper">
+         <p>Copyright © 2018 Juno College</p>
+      </div> <!--wrapper ends-->
    </footer>
 
    <script src='https://code.jquery.com/jquery-3.4.0.min.js'

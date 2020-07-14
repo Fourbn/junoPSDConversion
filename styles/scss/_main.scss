@@ -422,6 +422,7 @@ aside {
          line-height: 2.2rem;
 
          a {
+            font-style: italic;
             border-bottom: 1px solid $secondaryBackground;
             
             &:hover,
@@ -443,12 +444,14 @@ aside {
 
 
 // CONTACT PAGE
-.contactContainer {
+.contact main {
    background: $mainBackground;
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-   margin-bottom: -30px;
+
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -30px;
+   }
 }
 
 .contactInfo {
@@ -457,9 +460,9 @@ aside {
    flex: 3 3 230px;
    max-width: 230px;
    align-self: center;
-   margin: 0 50px;
+   margin: 0 50px 0 10px;
    position: relative;
-   top: 5px;
+   top: -8px;
 
    ul {
       display: flex;
@@ -496,15 +499,16 @@ aside {
    max-width: 900px;
    position: relative;
    top: -240px;
-   right: 15px;
+   right: 0;
    height: 530px;
 
    h1 {
-      padding: 0 0 15px 15px;
+      padding-bottom: 15px;
    }
 }
 
-.contactSection .wrapper {
+.contactSection .formContainer,
+.contactSection .contactInfo {
    display: flex;
    justify-content: flex-end;
 }

@@ -946,6 +946,7 @@ aside {
 }
 
 .otherBlogs .sideText p a {
+  font-style: italic;
   border-bottom: 1px solid #0f614e;
 }
 
@@ -962,14 +963,14 @@ aside {
   padding-left: 7px;
 }
 
-.contactContainer {
+.contact main {
   background: #0c1423;
+}
+
+.contact main .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: -30px;
@@ -987,9 +988,9 @@ aside {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 0 50px;
+  margin: 0 50px 0 10px;
   position: relative;
-  top: 5px;
+  top: -8px;
 }
 
 .contactInfo ul {
@@ -1031,15 +1032,16 @@ aside {
   max-width: 900px;
   position: relative;
   top: -240px;
-  right: 15px;
+  right: 0;
   height: 530px;
 }
 
 .contactSection h1 {
-  padding: 0 0 15px 15px;
+  padding-bottom: 15px;
 }
 
-.contactSection .wrapper {
+.contactSection .formContainer,
+.contactSection .contactInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1297,12 +1299,10 @@ footer p {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    margin: 40px 57px;
+    margin: 70px 57px;
     width: 100%;
     max-width: none;
     top: 0;
-  }
-  .contactInfo .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1314,9 +1314,12 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
   }
+  .contactInfo address {
+    text-align: center;
+  }
   .contactSection {
     right: 0;
-    height: 350px;
+    height: 345px;
   }
   .contactSection h1 {
     padding-left: 40px;
