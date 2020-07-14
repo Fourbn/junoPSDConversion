@@ -976,54 +976,6 @@ aside {
   margin-bottom: -30px;
 }
 
-.contactInfo {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  width: 30%;
-  -webkit-box-flex: 3;
-      -ms-flex: 3 3 230px;
-          flex: 3 3 230px;
-  max-width: 230px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 0 50px 0 10px;
-  position: relative;
-  top: -8px;
-}
-
-.contactInfo ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.contactInfo ul a {
-  padding: 20px;
-}
-
-.contactInfo ul a:hover, .contactInfo ul a:focus {
-  color: #86e0f9;
-}
-
-.contactInfo ul .fab {
-  display: inline-block;
-  font-size: 2rem;
-}
-
-.contactInfo h2 {
-  text-transform: uppercase;
-  margin: 20px 0;
-}
-
-.contactInfo p {
-  line-height: 2.7rem;
-}
-
 .contactSection {
   background: none;
   -webkit-box-flex: 1;
@@ -1144,6 +1096,54 @@ aside {
   border: 2px solid #86e0f9;
   -webkit-transition: background .3s, color .3s, border .3s;
   transition: background .3s, color .3s, border .3s;
+}
+
+.contactInfo {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 30%;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 230px;
+          flex: 3 3 230px;
+  max-width: 230px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 50px 0 10px;
+  position: relative;
+  top: -8px;
+}
+
+.contactInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contactInfo ul a {
+  padding: 20px;
+}
+
+.contactInfo ul a:hover, .contactInfo ul a:focus {
+  color: #86e0f9;
+}
+
+.contactInfo ul .fab {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.contactInfo h2 {
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.contactInfo p {
+  line-height: 2.7rem;
 }
 
 footer {

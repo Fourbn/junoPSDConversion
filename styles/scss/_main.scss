@@ -1,3 +1,5 @@
+//========================================
+// GENERAL SITE STYLES
 section,
 article,
 aside {
@@ -13,7 +15,10 @@ aside {
       @include buttonTransition($mainBackground, #fff, #fff)
    }
 }
+//========================================
 
+
+//========================================
 // INDEX PAGE
 .index {
    h2 {
@@ -257,8 +262,10 @@ aside {
       }
    }
 }
+//========================================
 
 
+//========================================
 // BLOG PAGE
 .blog main {
    background: $mainBackground;
@@ -441,8 +448,10 @@ aside {
       }
    }
 }
+//========================================
 
 
+//========================================
 // CONTACT PAGE
 .contact main {
    background: $mainBackground;
@@ -451,45 +460,6 @@ aside {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: -30px;
-   }
-}
-
-.contactInfo {
-   order: -1;
-   width: 30%;
-   flex: 3 3 230px;
-   max-width: 230px;
-   align-self: center;
-   margin: 0 50px 0 10px;
-   position: relative;
-   top: -8px;
-
-   ul {
-      display: flex;
-      justify-content: center;
-
-      a {
-         padding: 20px;
-
-         &:hover, 
-         &:focus {
-            color: $accentColor;
-         }
-      }
-
-      .fab {
-         display: inline-block;
-         font-size: 2rem;
-      }
-   }
-
-   h2 {
-      text-transform: uppercase;
-      margin: 20px 0;
-   }
-
-   p {
-      line-height: 2.7rem;
    }
 }
 
@@ -570,3 +540,43 @@ aside {
       }
    }
 }
+
+.contactInfo {
+   order: -1;
+   width: 30%;
+   flex: 3 3 230px;
+   max-width: 230px;
+   align-self: center;
+   margin: 0 50px 0 10px;
+   position: relative;
+   top: -8px;
+
+   ul {
+      display: flex;
+      justify-content: center;
+
+      a {
+         padding: 20px;
+
+         &:hover, 
+         &:focus {
+            color: $accentColor;
+         }
+      }
+
+      .fab {
+         display: inline-block;
+         font-size: 2rem;
+      }
+   }
+
+   h2 {
+      text-transform: uppercase;
+      margin: 20px 0;
+   }
+
+   p {
+      line-height: 2.7rem;
+   }
+}
+//========================================

@@ -1,4 +1,3 @@
-
 // Toggle some classes to make the mobile nav button work
 $(function () {
    $(".fa-bars").on("click", function () {

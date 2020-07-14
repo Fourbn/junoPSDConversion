@@ -1,4 +1,5 @@
-// GENERAL STYLES
+//========================================
+// GENERAL SITE STYLES
 header {
    height: 100vh;
    background-position: center;
@@ -8,7 +9,10 @@ header {
 h1 {
    @include headerText(8rem, 92px);
 }
+//========================================
 
+
+//========================================
 //INDEX PAGE SPECIFIC
 .index header {
    background-image: linear-gradient(rgba(0,0,0,.8) 5%, rgba(0,0,0,.1) 60%), url(../assets/header-image.jpg);
@@ -40,12 +44,16 @@ h1 {
    }
 }
 
+
+//========================================
 //BLOG PAGE SPECIFIC 
 .blog header {
    background-image: url(../assets/blog-header.jpg);
    height: 80vh;
 }
 
+
+//========================================
 //CONTACT PAGE SPECIFIC
 .contact header {
    background-image: url(../assets/contact-header.jpg);
