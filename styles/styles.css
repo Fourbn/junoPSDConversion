@@ -353,7 +353,7 @@ h1 {
 .index header .headerImage {
   position: relative;
   top: 20px;
-  right: 0;
+  right: -2.6%;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 440px;
           flex: 1 0 440px;
@@ -440,7 +440,7 @@ aside {
 }
 
 .aboutSection {
-  height: 100vh;
+  padding: 150px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,6 +570,7 @@ aside {
   margin-right: 30px;
   position: relative;
   top: -70px;
+  left: -2.6%;
 }
 
 .mainArticles .newAdditionsImage img {
@@ -581,6 +582,7 @@ aside {
   margin-left: 30px;
   position: relative;
   bottom: -50px;
+  right: -2.6%;
 }
 
 .mainArticles .meetNemoImage img {
@@ -742,6 +744,9 @@ aside {
 
 .blog main {
   background: #0c1423;
+}
+
+.blog main .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -761,6 +766,7 @@ aside {
   max-width: 800px;
   position: relative;
   top: -300px;
+  right: -2.6%;
 }
 
 .discoveringSpecies h1 {
@@ -900,10 +906,11 @@ aside {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  margin: 20px 50px;
+  margin: 20px 49px;
   height: 100%;
   position: relative;
   top: 200px;
+  left: -2.6%;
 }
 
 .otherBlogs .sideImage {
@@ -1194,7 +1201,7 @@ footer p {
   }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 955px) {
   .index header .headerContents {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1216,6 +1223,9 @@ footer p {
     margin: 0 auto;
     text-align: center;
   }
+}
+
+@media (max-width: 910px) {
   .siteMap {
     padding: 50px 0;
   }
@@ -1226,6 +1236,58 @@ footer p {
   .monthProfile .wrapper .monthProfileText {
     margin-left: 0;
     margin-top: 20px;
+  }
+  .discoveringSpecies {
+    right: -25px;
+    margin-right: 35px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 250px;
+            flex: 1 0 250px;
+  }
+  .otherBlogs {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    top: 0;
+    max-width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 20px 90px;
+  }
+  .otherBlogs .sideImage {
+    left: -20px;
+    height: 100%;
+  }
+  .otherBlogs .sideImage img {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .otherBlogs .sideText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 235px;
+            flex: 1 0 235px;
+    margin: 20px 0;
+    padding-bottom: 0;
+  }
+  .otherBlogs .sideText p {
+    width: 70%;
+    text-align: center;
   }
   .contactContainer {
     margin-bottom: 0;
@@ -1261,60 +1323,6 @@ footer p {
   }
   .contactSection .contactForm {
     margin-left: 25px;
-  }
-}
-
-@media (max-width: 867px) {
-  .discoveringSpecies {
-    right: -35px;
-    margin-right: 35px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 250px;
-            flex: 1 0 250px;
-  }
-  .otherBlogs {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    top: 0;
-    max-width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .otherBlogs .sideImage {
-    left: -20px;
-    height: 100%;
-  }
-  .otherBlogs .sideImage img {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .otherBlogs .sideText {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 235px;
-            flex: 1 0 235px;
-    margin: 20px 0;
-    padding-bottom: 0;
-  }
-  .otherBlogs .sideText p {
-    width: 70%;
-    text-align: center;
   }
 }
 

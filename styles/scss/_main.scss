@@ -26,7 +26,7 @@ aside {
 }
 
 .aboutSection {
-   height: 100vh;
+   padding: 150px 0;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -112,6 +112,7 @@ aside {
       margin-right: 30px;
       position: relative;
       top: -70px;
+      left: -2.6%;
       
       img {
          box-shadow: 30px 30px $accentColor;
@@ -122,6 +123,7 @@ aside {
       margin-left: 30px;
       position: relative;
       bottom: -50px;
+      right: -2.6%;
       
       img {
          box-shadow: -30px 30px $accentColor;
@@ -260,10 +262,12 @@ aside {
 // BLOG PAGE
 .blog main {
    background: $mainBackground;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   height: 100%;
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 100%;
+   }
 }
 
 .discoveringSpecies {
@@ -272,6 +276,7 @@ aside {
    max-width: 800px;
    position: relative;
    top: -300px;
+   right: -2.6%;
 
    h1 {
       padding-bottom: 15px;
@@ -381,10 +386,11 @@ aside {
    flex: 1 0 300px;
    max-width: 300px;
    order: -1;
-   margin: 20px 50px;
+   margin: 20px 49px;
    height: 100%;
    position: relative;
    top: 200px;
+   left: -2.6%;
 
    .sideImage {
       position: relative;

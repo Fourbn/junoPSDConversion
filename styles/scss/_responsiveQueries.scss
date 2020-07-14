@@ -1,9 +1,8 @@
-//INDEX
+//INDEX: reposition New Addition & Meet Nemo section to ontop of each other
 @media (max-width: 985px) {
    .mainArticles {
       .mainArticlesContainer {
          justify-content: center;
-         // align-items: center;
       }
 
       .newAdditionsText,
@@ -33,10 +32,11 @@
       }
    }
 }
+//======================================
 
-// INDEX, CONTACT PAGE
-@media (max-width: 910px) {
-   // INDEX PAGE 
+
+//INDEX: header sizing adjustment
+@media (max-width: 955px) {
    .index header {
       .headerContents {
          flex-wrap: wrap;
@@ -44,12 +44,12 @@
          align-items: flex-end;
          padding-top: 0;
       }
-
+   
       .headerImage {
          top: 0;
          max-width: 440px;
       }
-
+   
       h1 {
          font-size: 10rem;
          max-width: 100%;
@@ -57,6 +57,15 @@
          text-align: center;
       }
    }
+}
+//======================================
+
+
+// INDEX: minor site map & profile section heigh adjustments
+// BLOG POST: .otherBlogs pushed to bottom, position adjustments
+// CONTACT: contact info pushed down, position adjustments
+@media (max-width: 910px) {
+   // INDEX PAGE 
 
    .siteMap {
       padding: 50px 0;
@@ -70,6 +79,46 @@
          .monthProfileText {
             margin-left: 0;
             margin-top: 20px;
+         }
+      }
+   }
+
+   //BLOG POST
+   .discoveringSpecies {
+      right: -25px;
+      margin-right: 35px;
+      flex: 1 0 250px;
+   }
+   
+   .otherBlogs {
+      order: 0;
+      top: 0;
+      max-width: 90%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 90px;
+   
+      .sideImage {
+         left: -20px;
+         height: 100%;
+   
+         img {
+            transform: translateY(0);
+         }
+      }
+   
+      .sideText {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         flex: 1 0 235px;
+         margin: 20px 0;
+         padding-bottom: 0;
+   
+         p {
+            width: 70%;
+            text-align: center;
          }
       }
    }
@@ -97,7 +146,6 @@
    .contactSection {
       right: 0;
       height: 350px;
-      // overflow: hidden;
 
       h1 {
          padding-left: 40px;
@@ -108,49 +156,11 @@
       }
    }
 }
+//======================================
 
-// BLOG POSTS
-@media (max-width: 867px) {
-   .discoveringSpecies {
-      right: -35px;
-      margin-right: 35px;
-      flex: 1 0 250px;
-   }
-   
-   .otherBlogs {
-      order: 0;
-      top: 0;
-      max-width: 90%;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
 
-      .sideImage {
-         left: -20px;
-         height: 100%;
-
-         img {
-            transform: translateY(0);
-         }
-      }
-
-      .sideText {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         flex: 1 0 235px;
-         margin: 20px 0;
-         padding-bottom: 0;
-
-         p {
-            width: 70%;
-            text-align: center;
-         }
-      }
-   }
-}
-
-// INDEX, BLOG POSTS
+// INDEX: center main articles, adjust site map and profile positioning
+// BLOG POSTS: center other blogs aside
 @media (max-width: 670px) {
    // INDEX PAGE
    .mainArticles {
@@ -200,8 +210,12 @@
       }
    }
 }
+//======================================
 
-// MOBILE NAV STARTS HERE, INDEX AND BLOG POST PAGES
+
+// MOBILE NAV STARTS HERE
+// INDEX: header contents size adjustments, minor section height adjustments
+// CONTACT PAGES: push contact form and info contents closer to edges
 @media (max-width: 550px) {
    // MOBILE NAV STYLES
    .fa-bars {
@@ -305,8 +319,12 @@
       }
    }
 }
+//======================================
 
-// INDEX, BLOG POSTS
+// wrapper widened
+// INDEX: reduce box shadow, widen sitemap
+// BLOG POSTS: reduce box shadow, center other blogs image
+// CONTACT: reduce box shadow, reposition widths
 @media (max-width: 450px) {
    .wrapper {
       width: 98%;
@@ -376,3 +394,4 @@
       margin: 40px 20px;
    }
 }
+//======================================
