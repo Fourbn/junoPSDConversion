@@ -255,6 +255,10 @@ a {
   margin: 0 auto;
 }
 
+.fa-bars {
+  display: none;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1150,11 +1154,176 @@ footer p {
 }
 
 @media (max-width: 985px) {
-  .newAdditionsImage,
-  .meetNemoImage {
-    max-width: 350px;
+  .mainArticles .mainArticlesContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mainArticles .newAdditionsText,
+  .mainArticles .meetNemoText {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 350px;
-            flex: 1 0 350px;
+        -ms-flex: 1 0 550px;
+            flex: 1 0 550px;
+  }
+  .mainArticles .newAdditionsImage,
+  .mainArticles .meetNemoImage {
+    position: static;
+    height: 100%;
+  }
+  .mainArticles .newAdditionsText {
+    margin: 20px 50px 80px 0;
+    padding-left: 0;
+  }
+  .mainArticles .meetNemoImage {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .mainArticles .meetNemoText {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 20px 0 0 50px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 910px) {
+  .index header .headerContents {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding-top: 0;
+  }
+  .index header .headerImage {
+    top: 0;
+    max-width: 440px;
+  }
+  .index header h1 {
+    font-size: 10rem;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .siteMap {
+    padding: 50px 0;
+  }
+  .monthProfile {
+    padding: 60px 50px;
+    text-align: center;
+  }
+  .monthProfile .wrapper .monthProfileText {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 670px) {
+  .mainArticles {
+    padding: 40px 20px;
+  }
+  .mainArticles .newAdditionsText,
+  .mainArticles .meetNemoText {
+    text-align: center;
+    padding: 0;
+    margin: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 300px;
+            flex: 1 0 300px;
+  }
+  .mainArticles .newAdditionsText .readMore,
+  .mainArticles .meetNemoText .readMore {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .mainArticles .newAdditionsText {
+    margin-bottom: 60px;
+  }
+  .mainArticles .newAdditionsImage,
+  .mainArticles .meetNemoImage {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 250px;
+            flex: 1 0 250px;
+  }
+  .siteMap ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 300px;
+            flex: 1 0 300px;
+    padding: 0 0 0 5px;
+  }
+  .monthProfile {
+    padding: 110px 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .fa-bars {
+    display: inline-block;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    z-index: 100;
+    color: #0c1423;
+    background: #86e0f9;
+    border-radius: 50%;
+    font-size: 3.5rem;
+    padding: 15px;
+    cursor: pointer;
+  }
+  .index header h1 {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  .index header .headerImage {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 300px;
+            flex: 1 0 300px;
+  }
+  .index h2 {
+    line-height: 5rem;
+  }
+  .aboutSection {
+    padding: 50px 0;
+    height: 100%;
+  }
+  .aboutSection .wrapper p {
+    text-align: center;
+  }
+  .monthProfile .wrapper .monthProfileText {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 300px;
+            flex: 1 0 300px;
+  }
+  .monthProfile .wrapper .monthProfileText p {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    width: 98%;
+  }
+  .mainArticles .newAdditionsImage img {
+    -webkit-box-shadow: 15px 15px #86e0f9;
+            box-shadow: 15px 15px #86e0f9;
+  }
+  .mainArticles .meetNemoImage img {
+    -webkit-box-shadow: -15px 15px #86e0f9;
+            box-shadow: -15px 15px #86e0f9;
+  }
+  .mainArticles .newAdditionsText p,
+  .mainArticles .meetNemoText p {
+    margin: 15px 0;
+  }
+  .siteMap ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 200px;
+            flex: 1 0 200px;
   }
 }
