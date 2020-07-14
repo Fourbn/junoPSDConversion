@@ -30,6 +30,7 @@ aside {
    }
 }
 
+//"What is Under the Sea?"
 .aboutSection {
    padding: 150px 0;
    display: flex;
@@ -48,6 +49,7 @@ aside {
    }
 }
 
+//"New Additions" and "Meet Real Nemo" section
 .mainArticles {
    background: $secondaryBackground;
    padding: 40px 0;
@@ -68,6 +70,7 @@ aside {
       height: 100%;
    }
 
+   //text container positioning and text styles
    .newAdditionsText,
    .meetNemoText {
       display: flex;
@@ -100,6 +103,7 @@ aside {
       }
    }
    
+   //image container positioning and image sizing
    .newAdditionsImage,
    .meetNemoImage {
       height: 280px;
@@ -136,6 +140,7 @@ aside {
    }
 }
 
+//"Locations, Community, Blog, Get in Touch"
 .siteMap {
    padding: 100px 0;
 
@@ -200,6 +205,7 @@ aside {
    }
 }
 
+//Display banner of the whale shark and the person in silhouette reaching up at it
 .aquariumView {
    min-height: 75vh;
    width: 100%;
@@ -209,14 +215,17 @@ aside {
    background-repeat: no-repeat;
 }
 
+//"This Month Profile"
 .monthProfile {
    padding: 110px 70px;
 
+   //wrapper used as a flex object for positioning
    .wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
 
+      //text container styling
       .monthProfileText {
          flex: 1 0 400px;
          margin-left: 50px;
@@ -226,6 +235,7 @@ aside {
          }
       }
 
+      //square image container size and positioning
       .monthProfileImage {
          order: -1;
          flex: 1 0 200px;
@@ -242,6 +252,7 @@ aside {
    }
 }
 
+//Three images displayed possibly like a carousel
 .gallery {
    background: $secondaryBackground;
    padding: 50px 0;
@@ -268,6 +279,7 @@ aside {
 //========================================
 // BLOG PAGE
 .blog main {
+   //flex object to position article and aside on the page
    background: $mainBackground;
    .wrapper {
       display: flex;
@@ -277,6 +289,7 @@ aside {
    }
 }
 
+//The blog article is one long article (including comment section and form) to make positioning easier
 .discoveringSpecies {
    background: none;
    flex: 1 0 450px;
@@ -312,6 +325,7 @@ aside {
    }
 }
 
+//comments section including comment form
 .comments {
    margin-right: 110px;
 
@@ -388,6 +402,7 @@ aside {
    }
 }
 
+//more blogs aside including find out more link
 .otherBlogs {
    background: $secondaryBackground;
    flex: 1 0 300px;
@@ -456,6 +471,7 @@ aside {
 .contact main {
    background: $mainBackground;
 
+   //wrapper used as flex object to position both contactSection and contactInfo aside
    .wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -463,6 +479,7 @@ aside {
    }
 }
 
+//contains contact form within the green box
 .contactSection {
    background: none;
    flex: 1 1 550px;
@@ -483,6 +500,7 @@ aside {
    justify-content: flex-end;
 }
 
+//contact message submit form
 .contactForm {
    background: $secondaryBackground;
    width: 100%;
@@ -541,6 +559,7 @@ aside {
    }
 }
 
+//how to contact company aside information including social media nav
 .contactInfo {
    order: -1;
    width: 30%;

@@ -318,7 +318,6 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 header {
-  height: 100vh;
   background-position: center;
   background-size: cover;
 }
