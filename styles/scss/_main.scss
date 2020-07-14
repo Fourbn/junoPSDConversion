@@ -457,19 +457,20 @@ aside {
 
    ul {
       display: flex;
+      justify-content: center;
 
-      a:focus {
-         color: $accentColor;
+      a {
+         padding: 20px;
+
+         &:hover, 
+         &:focus {
+            color: $accentColor;
+         }
       }
 
       .fab {
          display: inline-block;
-         margin-right: 30px;
          font-size: 2rem;
-
-         &:hover {
-            color: $accentColor;
-         }
       }
    }
 

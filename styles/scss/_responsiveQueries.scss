@@ -1,3 +1,4 @@
+//INDEX
 @media (max-width: 985px) {
    .mainArticles {
       .mainArticlesContainer {
@@ -33,7 +34,9 @@
    }
 }
 
+// INDEX, CONTACT PAGE
 @media (max-width: 910px) {
+   // INDEX PAGE 
    .index header {
       .headerContents {
          flex-wrap: wrap;
@@ -70,9 +73,86 @@
          }
       }
    }
+
+   // CONTACT
+   .contactContainer {
+      margin-bottom: 0;
+   }
+
+   .contactInfo {
+      position: static;
+      order: 0;
+      margin: 40px 57px;
+      width: 100%;
+      max-width: none;
+      top: 0;
+
+      .wrapper {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   .contactSection {
+      right: 0;
+      height: 350px;
+      // overflow: hidden;
+
+      h1 {
+         padding-left: 40px;
+      }
+
+      .contactForm {
+         margin-left: 25px;
+      }
+   }
 }
 
+// BLOG POSTS
+@media (max-width: 867px) {
+   .discoveringSpecies {
+      right: -35px;
+      margin-right: 35px;
+      flex: 1 0 250px;
+   }
+   
+   .otherBlogs {
+      order: 0;
+      top: 0;
+      max-width: 90%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .sideImage {
+         left: -20px;
+         height: 100%;
+
+         img {
+            transform: translateY(0);
+         }
+      }
+
+      .sideText {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         flex: 1 0 235px;
+         margin: 20px 0;
+         padding-bottom: 0;
+
+         p {
+            width: 70%;
+            text-align: center;
+         }
+      }
+   }
+}
+
+// INDEX, BLOG POSTS
 @media (max-width: 670px) {
+   // INDEX PAGE
    .mainArticles {
       padding: 40px 20px;
 
@@ -110,8 +190,18 @@
    .monthProfile {
       padding: 110px 0;
    }
+
+   // BLOG POSTS
+   .otherBlogs {
+      margin: 20px 35px;
+      flex: 1 0 200px;
+      .sideImage {
+         left: 0;
+      }
+   }
 }
 
+// MOBILE NAV STARTS HERE, INDEX AND BLOG POST PAGES
 @media (max-width: 550px) {
    // MOBILE NAV STYLES
    .fa-bars {
@@ -122,12 +212,45 @@
       z-index: 100;
       color: $mainBackground;
       background: $accentColor;
+      border: 2px solid #fff;
       border-radius: 50%;
       font-size: 3.5rem;
       padding: 15px;
       cursor: pointer;
    }
+   // hide the nav container to avoid vertical scroll
+   nav {
+      width: 1px;
+      overflow: hidden;
+   }
+   // mobile nav styles
+   nav ul {
+      background: $mainBackground;
+      border: 2px solid $accentColor;
+      border-radius: 50%;
+      padding: 41px;
+      width: 265px;
+      position: fixed;
+      right: -100%;
+      top: 100px;
+      z-index: 100;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      transition: right .3s ease-in;
+
+      li {
+         width: 115px;
+         text-align: right;
+      }
+   }
+   // jQuery class to allow for button functionality
+   .nav-slide-in {
+      right: -101px;
+      top: 100px;
+      transition: right .3s ease-out;
+   }
    
+   // INDEX PAGE
    .index {
       header h1 {
          font-size: 7rem;
@@ -159,13 +282,37 @@
          padding: 0 15px;
       }
    }
+
+   //CONTACT PAGE
+   .contactSection {
+      h1 {
+         font-size: 6rem;
+         line-height: 5rem;
+         padding-right: 7px;
+      }
+
+      .contactForm {
+         padding: 5px;
+
+         input {
+            width: 100%;
+            margin-top: 0;
+         }
+
+         textarea {
+            margin-top: 20px;
+         }
+      }
+   }
 }
 
+// INDEX, BLOG POSTS
 @media (max-width: 450px) {
    .wrapper {
       width: 98%;
    }
    
+   // INDEX PAGE
    .mainArticles {
       .newAdditionsImage img {
          box-shadow: 15px 15px $accentColor;
@@ -183,5 +330,49 @@
    
    .siteMap ul li {
       flex: 1 0 200px;
+   }
+
+   // BLOG POSTS
+   .discoveringSpecies {
+      .blogText {
+         margin-right: 15px;
+         left: -14.8px;
+      }
+
+      .blogImage {
+         box-shadow: -15px 15px $accentColor;
+      }
+   }
+
+   .comments {
+      margin-right: 35px;
+
+      .bydate {
+         line-height: 2rem;
+         padding-top: 7px;
+      }
+
+      .submitComment input {
+         width: 100%;
+      }
+   }
+   
+   .otherBlogs .sideImage {
+      position: static;
+      width: 100%;
+      flex: 1 0 200px;
+   }
+
+   //CONTACT PAGE
+   .contactSection {
+      right: 4px;
+   }
+   
+   .contactForm {
+      box-shadow: -15px 15px $accentColor;
+   }
+
+   .contactInfo {
+      margin: 40px 20px;
    }
 }
