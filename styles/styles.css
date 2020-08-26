@@ -844,9 +844,11 @@ aside {
   font-size: 1.5rem;
   line-height: 32px;
   color: #fff;
-  border: none;
+  border: 2px solid #0c1423;
   border-bottom: 2px solid #86e0f9;
   padding: 10px 20px;
+  -webkit-transition: border .3s;
+  transition: border .3s;
 }
 
 .comments .submitComment input::-webkit-input-placeholder, .comments .submitComment textarea::-webkit-input-placeholder {
@@ -865,8 +867,10 @@ aside {
   opacity: 1;
 }
 
-.comments .submitComment input:focus, .comments .submitComment textarea:focus {
-  border: 2px solid #86e0f9;
+.comments .submitComment input:hover, .comments .submitComment input:focus, .comments .submitComment textarea:hover, .comments .submitComment textarea:focus {
+  border: 2px solid yellow;
+  -webkit-transition: border .3s;
+  transition: border .3s;
 }
 
 .comments .submitComment input {

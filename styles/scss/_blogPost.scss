@@ -85,16 +85,19 @@
       input, textarea {
          background: none;
          @include bodyText();
-         border: none;
+         border: 2px solid $mainBackground;
          border-bottom: 2px solid $accentColor;
          padding: 10px 20px;
+         transition: border .3s;
          
          &::placeholder {
             opacity: 1;
          }
 
+         &:hover, 
          &:focus {
-            border: 2px solid $accentColor;
+            border: 2px solid yellow;
+            transition: border .3s;
          }
       }
       
