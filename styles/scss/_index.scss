@@ -1,0 +1,257 @@
+//========================================
+// INDEX PAGE
+.index {
+   h2 {
+      @include headerText(4.2rem, auto);
+   }
+   
+   h3 {
+      @include headerText(3.2rem, auto);
+   }
+}
+
+//"What is Under the Sea?"
+.aboutSection {
+   padding: 150px 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+
+   h2 {
+      margin-top: 10px;
+   }
+
+   p {
+      text-align: left;
+      width: 70%;
+      margin: 27px auto;
+   }
+}
+
+//"New Additions" and "Meet Real Nemo" section
+.mainArticles {
+   background: $secondaryBackground;
+   padding: 40px 0;
+   
+   .readMore {
+      @include button($mainBackground, #fff);
+
+      &:hover,
+      &:focus {
+         @include buttonTransition($accentColor, $mainBackground, $accentColor);
+      }
+   }
+
+   .mainArticlesContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 100%;
+   }
+
+   //text container positioning and text styles
+   .newAdditionsText,
+   .meetNemoText {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 330px;
+      max-width: 530px;
+
+      .readMore {
+         width: 150px;
+      }
+
+      p {
+         margin: 30px 0;
+      }
+   }
+
+   .newAdditionsText {
+      padding: 0 30px 0 15px;
+      margin: 0 2.5% 0 30px;
+   }
+
+   .meetNemoText {
+      justify-content: flex-end;
+      text-align: right;
+      margin: 0 30px 0 2.5%;
+      padding: 0 15px 0 30px;
+      
+      .readMore {
+         align-self: flex-end;
+      }
+   }
+   
+   //image container positioning and image sizing
+   .newAdditionsImage,
+   .meetNemoImage {
+      height: 280px;
+      max-width: 550px;
+      flex: 1 0 550px;
+      margin-bottom: 30px;
+      
+      img {
+         width: 100%;
+      }
+   }
+   
+   .newAdditionsImage {
+      order: -1;
+      margin-right: 30px;
+      position: relative;
+      top: -70px;
+      left: -2.6%;
+      
+      img {
+         box-shadow: 30px 30px $accentColor;
+      }
+   }
+   
+   .meetNemoImage {
+      margin-left: 30px;
+      position: relative;
+      bottom: -50px;
+      right: -2.6%;
+      
+      img {
+         box-shadow: -30px 30px $accentColor;
+      }
+   }
+}
+
+//"Locations, Community, Blog, Get in Touch"
+.siteMap {
+   padding: 100px 0;
+
+// general list text and positioning stylings
+   ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+      
+      li {
+         min-height: calc(32px + 96px);
+         flex: 1 0 443px;
+         max-width: 500px;
+         padding: 0 50px 0 5px;
+         margin: 30px 10px;
+      }
+
+      li:nth-child(-n+2) {
+         align-self: flex-end;
+      }
+   }
+
+// custom bullet stylings
+   .fa-li {
+      left: -2.4em;
+      
+      .fa-circle {
+         color: $accentColor;
+         font-size: 2.8em;
+         position: relative;
+         left: -10px;
+         top: -5px;
+      }
+
+      .fa-location-arrow,
+      .fa-users,
+      .fa-file,
+      .fa-phone {
+         color: $mainBackground;
+         font-size: 1.533em;
+         top: 0.3px;
+      }
+   
+      .fa-location-arrow {
+         left: -5.4px;
+         top: 1px;
+      }
+
+      .fa-users {
+         left: -4px;
+      }
+
+      .fa-file {
+         left: -3.5px;
+      }
+
+      .fa-phone {
+         left: -4px;
+      }
+   }
+}
+
+//Display banner of the whale shark and the person in silhouette reaching up at it
+.aquariumView {
+   min-height: 75vh;
+   width: 100%;
+   background: url(../assets/banner.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+//"This Month Profile"
+.monthProfile {
+   padding: 110px 70px;
+
+   //wrapper used as a flex object for positioning
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      //text container styling
+      .monthProfileText {
+         flex: 1 0 400px;
+         margin-left: 50px;
+
+         p {
+            margin: 40px 0;
+         }
+      }
+
+      //square image container size and positioning
+      .monthProfileImage {
+         order: -1;
+         flex: 1 0 200px;
+         height: 100%;
+         max-width: 275px;
+         max-height: 275px;
+         box-shadow: 30px 30px $accentColor;
+         margin: 0 45px 45px 0;
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+
+//Three images displayed possibly like a carousel
+.gallery {
+   background: $secondaryBackground;
+   padding: 50px 0;
+
+   ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 0 50px;
+
+      li {
+         margin: 20px;
+         flex: 1 0 200px;
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+//========================================
+

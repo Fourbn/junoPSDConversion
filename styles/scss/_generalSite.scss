@@ -1,0 +1,18 @@
+//========================================
+// GENERAL SITE STYLES
+section,
+article,
+aside {
+   background-color: $mainBackground;
+   @include bodyText();
+}
+
+.readMore {
+   @include button($accentColor, $mainBackground);
+
+   &:hover,
+   &:focus {
+      @include buttonTransition($mainBackground, #fff, #fff)
+   }
+}
+//========================================

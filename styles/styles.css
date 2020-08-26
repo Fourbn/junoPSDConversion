@@ -791,7 +791,7 @@ aside {
   left: -30px;
 }
 
-.discoveringSpecies .blogText .bydate {
+.discoveringSpecies .blogText .byDate {
   margin-bottom: 40px;
 }
 
@@ -1033,6 +1033,8 @@ aside {
   line-height: 32px;
   color: #fff;
   padding: 5px 20px;
+  -webkit-transition: border .3s;
+  transition: border .3s;
 }
 
 .contactForm .nameInput::-webkit-input-placeholder,
@@ -1059,6 +1061,16 @@ aside {
   opacity: 1;
 }
 
+.contactForm .nameInput:hover, .contactForm .nameInput:focus,
+.contactForm .emailInput:hover,
+.contactForm .emailInput:focus,
+.contactForm .userComment:hover,
+.contactForm .userComment:focus {
+  border: 2px solid yellow;
+  -webkit-transition: border .3s;
+  transition: border .3s;
+}
+
 .contactForm .nameInput,
 .contactForm .emailInput {
   height: 50px;
@@ -1066,11 +1078,6 @@ aside {
   margin: 20px;
   border: 2px solid #0f614e;
   border-bottom: 2px solid #86e0f9;
-}
-
-.contactForm .nameInput:focus,
-.contactForm .emailInput:focus {
-  border-color: #86e0f9;
 }
 
 .contactForm .userComment {
@@ -1165,6 +1172,21 @@ footer p {
   color: #0c1423;
   text-align: center;
   margin: 1px 0;
+}
+
+footer a {
+  font-weight: 700;
+  -webkit-transition: color .3s, background-color .3s, padding .3s;
+  transition: color .3s, background-color .3s, padding .3s;
+  border-radius: 10px;
+}
+
+footer a:hover, footer a:focus {
+  color: #86e0f9;
+  background-color: #0c1423;
+  padding: 0 7px;
+  -webkit-transition: color .3s, background-color .3s, padding .3s;
+  transition: color .3s, background-color .3s, padding .3s;
 }
 
 @media (max-width: 985px) {
@@ -1469,7 +1491,7 @@ footer p {
 
 @media (max-width: 450px) {
   .wrapper {
-    width: 98%;
+    width: 96%;
   }
   .mainArticles .newAdditionsImage img {
     -webkit-box-shadow: 15px 15px #86e0f9;
@@ -1499,7 +1521,7 @@ footer p {
   .comments {
     margin-right: 35px;
   }
-  .comments .bydate {
+  .comments .byDate {
     line-height: 2rem;
     padding-top: 7px;
   }

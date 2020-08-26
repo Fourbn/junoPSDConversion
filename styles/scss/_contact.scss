@@ -1,0 +1,137 @@
+
+//========================================
+// CONTACT PAGE
+.contact main {
+   background: $mainBackground;
+
+   //wrapper used as flex object to position both contactSection and contactInfo aside
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -30px;
+   }
+}
+
+//contains contact form within the green box
+.contactSection {
+   background: none;
+   flex: 1 1 550px;
+   max-width: 900px;
+   position: relative;
+   top: -240px;
+   right: 0;
+   height: 530px;
+
+   h1 {
+      padding-bottom: 15px;
+   }
+}
+
+.contactSection .formContainer,
+.contactSection .contactInfo {
+   display: flex;
+   justify-content: flex-end;
+}
+
+//contact message submit form
+.contactForm {
+   background: $secondaryBackground;
+   width: 100%;
+   padding: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: flex-end;
+   box-shadow: -30px 30px $accentColor;
+
+   .nameInput,
+   .emailInput, 
+   .userComment {
+      background: $secondaryBackground;
+      @include bodyText();
+      padding: 5px 20px;
+      transition: border .3s;
+
+      &::placeholder {
+         opacity: 1;
+      }
+
+      &:hover, 
+      &:focus {
+         border: 2px solid yellow;
+         transition: border .3s;
+      }
+   }
+
+   .nameInput, 
+   .emailInput {
+      height: 50px;
+      width: calc(50% - 40px);
+      margin: 20px;
+      border: 2px solid $secondaryBackground;
+      border-bottom: 2px solid $accentColor;
+   }
+
+   .userComment {
+      width: 100%;
+      height: 200px;
+      margin: 0 20px;
+      border: 2px solid $accentColor;
+   }
+
+   .submit {
+      width: 100%;
+      margin: 20px;
+      border: 2px solid $mainBackground;
+      background: $mainBackground;
+      color: #fff;
+      cursor: pointer;
+      
+      &:hover,
+      &:focus {
+         @include buttonTransition($accentColor, $mainBackground, $accentColor);
+      }
+   }
+}
+
+//how to contact company aside information including social media nav
+.contactInfo {
+   order: -1;
+   width: 30%;
+   flex: 3 3 230px;
+   max-width: 230px;
+   align-self: center;
+   margin: 0 50px 0 10px;
+   position: relative;
+   top: -8px;
+
+   ul {
+      display: flex;
+      justify-content: center;
+
+      a {
+         padding: 20px;
+
+         &:hover, 
+         &:focus {
+            color: $accentColor;
+         }
+      }
+
+      .fab {
+         display: inline-block;
+         font-size: 2rem;
+      }
+   }
+
+   h2 {
+      text-transform: uppercase;
+      margin: 20px 0;
+   }
+
+   p {
+      line-height: 2.7rem;
+   }
+}
+//========================================

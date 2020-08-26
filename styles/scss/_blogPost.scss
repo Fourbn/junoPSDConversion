@@ -1,0 +1,188 @@
+//========================================
+// BLOG PAGE
+.blog main {
+   //flex object to position article and aside on the page
+   background: $mainBackground;
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 100%;
+   }
+}
+
+//The blog article is one long article (including comment section and form) to make positioning easier
+.discoveringSpecies {
+   background: none;
+   flex: 1 0 450px;
+   max-width: 800px;
+   position: relative;
+   top: -300px;
+   right: -2.6%;
+
+   h1 {
+      padding-bottom: 15px;
+   }
+
+   .blogImage {
+      box-shadow: -30px 30px $accentColor;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   .blogText {
+      padding: 60px 0 20px 40px;
+      margin-right: 80px;
+      border: 5px solid $accentColor;
+      border-right: none;
+      border-top: none;
+      position: relative;
+      left: -30px;
+
+      .byDate {
+         margin-bottom: 40px;
+      }
+   }
+}
+
+//comments section including comment form
+.comments {
+   margin-right: 110px;
+
+   h3 {
+      margin: 20px 0;
+   }
+
+   .commentBox {
+      display: flex;
+      margin-bottom: 50px;
+      height: 100%;
+      
+      .userImage {
+         margin-right: 20px;
+         padding-top: 10px;
+
+         img {
+            width: 66px;
+            height: 66px;
+         }
+      }
+
+      .userComment p:last-child {
+         line-height: 2.3rem;
+         margin-top: 10px;
+      }
+   }
+
+   .submitComment {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: -200px;
+      
+      input, textarea {
+         background: none;
+         @include bodyText();
+         border: none;
+         border-bottom: 2px solid $accentColor;
+         padding: 10px 20px;
+         
+         &::placeholder {
+            opacity: 1;
+         }
+
+         &:focus {
+            border: 2px solid $accentColor;
+         }
+      }
+      
+      input {
+         width: calc(50% - 20px);
+      }
+      
+      textarea {
+         width: 100%;
+         margin: 20px 0;
+         border: 2px solid $accentColor;
+         height: 200px;
+      }
+      
+      .submit {
+         background: $secondaryBackground;
+         width: 100%;
+         border: 2px solid $secondaryBackground;
+         color: #fff;
+         cursor: pointer;
+
+         &:hover,
+         &:focus {
+            @include buttonTransition($accentColor, $mainBackground, $accentColor);
+         }
+      }
+   }
+}
+
+//more blogs aside including find out more link
+.otherBlogs {
+   background: $secondaryBackground;
+   flex: 1 0 300px;
+   max-width: 300px;
+   order: -1;
+   margin: 20px 49px;
+   height: 100%;
+   position: relative;
+   top: 200px;
+   left: -2.6%;
+
+   .sideImage {
+      position: relative;
+      left: -60px;
+      top: -20px;
+      width: 340px;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         transform: translateY(-18%);
+      }
+   }
+
+   .sideText {
+      padding: 0 15px 15px 15px;
+
+      h3 {
+         text-transform: uppercase;
+         margin: 25px 0 5px 0;
+      }
+
+      h3:first-child {
+         margin-top: 0;
+      }
+
+      p {
+         line-height: 2.2rem;
+
+         a {
+            font-style: italic;
+            border-bottom: 1px solid $secondaryBackground;
+            
+            &:hover,
+            &:focus {
+               border-bottom: 1px solid white;
+            }
+         }
+      }
+
+      ul { 
+      padding-left: 15px;
+         li {
+            list-style: disc;
+            padding-left: 7px;
+         }
+      }
+   }
+}
+//========================================
